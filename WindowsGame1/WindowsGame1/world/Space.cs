@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using SpaceInvaders.world;
 using SpaceInvaders.managers;
-using SpaceInvaders.entities.ship;
+using SpaceInvaders.entities.ship_dec;
 
 namespace SpaceInvaders
 {
@@ -21,8 +21,7 @@ namespace SpaceInvaders
         public static ContentManager content;
         public static Viewport viewport;
         public static BulletManager bulletManager;
-
-        ShipBase ship;
+        ShipDecorator db;
         EnemyManager entityManager;
         CollisionManager collisionManager;
 
@@ -41,17 +40,20 @@ namespace SpaceInvaders
         protected override void Initialize()
         {
             base.Initialize();
+            db.Initialize();
         }
 
         // Load all the game content
         protected override void LoadContent()
-        {            
+        {
+            Console.WriteLine("lc");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             viewport = GraphicsDevice.Viewport;
 
-            ship = new ShipBase();
-            ship = new TextureDecorator(ship);
-            ship.LoadContent();
+            EntityComponent ship = new EntityComponent();
+            db = new ShipDecorator();
+            db.SetComponent(ship);
+            db.LoadContent();
 
             
             entityManager = new EnemyManager(120);
@@ -74,7 +76,7 @@ namespace SpaceInvaders
                 this.Exit();
 
             // Update entities
-            ship.Update(gameTime);
+            db.Update(gameTime);
             entityManager.Update(gameTime);
             bulletManager.Update(gameTime);
             collisionManager.Update(gameTime);
@@ -86,7 +88,7 @@ namespace SpaceInvaders
         {
             GraphicsDevice.Clear(Color.Black);
 
-            ship.Draw(gameTime);
+            db.Draw(gameTime);
             entityManager.Draw(gameTime);
             bulletManager.Draw(gameTime);
             base.Draw(gameTime);

@@ -82,7 +82,6 @@ namespace SpaceInvaders
             foreach(BaseEnemy e in enemies) {
                 
                 // Calculate offset for enemy
-                Console.WriteLine("Updating offset");
                 e.setOffset(75.0f * (float)(entityID%maxEnemyWidth), 10.0f + (entityID / maxEnemyWidth)*50.0f);
                 entityID++;
 
