@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f5f9ce30-3e99-42e7-ae2a-46ffccf66192"
+  name="world"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a8d3f6b7-b321-4168-b237-7ae14d81702f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSpaceInvaders.world"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="798c5fbf-dfcb-4f0f-866d-e34e29e675bd"
+        name="BulletManager"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="134461a8-823d-42e7-a344-c7370fbe7096"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="82b28c95-9ee3-4fe9-a72d-21c8de544ffa"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e51b15da-a21a-49fe-91ea-4e4e21b0106a">
+                <propertyInstance
+                  Id="920a1529-8849-45c6-a255-c267a59382de"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="41dbc470-7f00-44e6-8ef5-0a8954b42998">
+                <propertyInstance
+                  Id="ab717bae-4d5c-4438-aadd-de0d8c7d69f7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e15e78a0-f2fb-43c6-aae4-04cddb744a91">
+                <propertyInstance
+                  Id="d0b91f19-7d79-4c10-b4af-36ed6217cb88"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="84a15b08-a7c9-4c02-8c57-b2a268977756">
+                <propertyInstance
+                  Id="07b7c120-790a-409b-bf3a-7d2b68b7a4a2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8d8da3e6-89bc-400d-b60d-1949b4b24ddb">
+                <propertyInstance
+                  Id="e20ecb18-3594-4933-b1a6-7fa8dde0fbc7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="819ceb9c-999e-4e9a-ad84-09d80c33a3e5"
+            name="playerBulletCount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b29cc14c-60f2-4bfa-8541-5fb29e36dffd"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3DplayerBulletCount"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2fd3a01d-1b54-45ac-a84a-99a8212c6eb0"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40ea4557-b1b7-4292-88f2-64a60dc4f804">
+                    <propertyInstance
+                      Id="26bcd46a-7ed7-4460-8519-8cb853eccdc1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de92f90d-6516-4d0d-94f8-f139694d19a2">
+                    <propertyInstance
+                      Id="964ceef7-ee55-4ed4-b2db-c56ff06cae70"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa5648f0-5619-4000-9211-88b40fddf1a4">
+                    <propertyInstance
+                      Id="1a1486bc-5a41-4d7b-8c0c-26da026ef7d9"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e8ed39a-e8b9-448f-9e0a-606e1c237f30">
+                    <propertyInstance
+                      Id="9cbc5553-6065-466b-9b40-355e44c7e41f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f68f5628-7046-4b42-8420-0e4e3858e66c">
+                    <propertyInstance
+                      Id="bbd999d2-a773-4cd7-90d9-4eca19ea1f85"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1e847efd-ea7a-4e02-8b42-0be550804d14"
+            name="playerBullets"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6dc9ad12-e555-4d9b-9057-bf77173ba87f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3DplayerBullets"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="68b6a9b0-d79b-4d67-91a0-25649a5968c9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b68fa13-d9f7-4207-b069-93813cfb28a5">
+                    <propertyInstance
+                      Id="0105f8db-62a9-455b-8dfc-2e9598381fa2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca0c4b4c-9458-4d8f-888d-90d6043fc918">
+                    <propertyInstance
+                      Id="89d4486d-f8ca-461f-b6cc-58989154a8e4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6980e5a6-fc51-421e-8da7-1462cdd50b6d">
+                    <propertyInstance
+                      Id="1b79ffbf-8b36-4095-a9a5-c1494509cde8"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff2c4a4c-2261-4c67-a001-a5e700872d16">
+                    <propertyInstance
+                      Id="b29d70a6-afac-4a4e-a881-00a631b9b1e7"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e72857de-4026-4b33-84d7-a59f67924c26">
+                    <propertyInstance
+                      Id="a0cdfdfd-58ab-4e27-9452-f7ee6883de1c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="6122bfa1-6767-4f83-a9c8-c1242eba5c89"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="7740c804-6751-4470-9dea-62b582a29f05"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f83161d1-58ba-4a27-b8e7-f71c9cae5367"
+                LastKnownName="Ammo"
+                LastKnownLocation="Package1_2107.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="de7bcdbe-cb55-48e1-90e4-ad3b813fad50"
+            name="Draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d918849a-6e63-460d-b652-5343f685d2e7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.Game.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DGameTime)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4df20bbf-9e0d-4778-b593-49036619b5b0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="609ebd18-7bd3-4515-81ac-89f73228515e">
+                    <propertyInstance
+                      Id="e7e3d9d6-a150-449f-a922-e41694f3707f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3df9f47-a239-4435-8177-daf6ab9e5d7d">
+                    <propertyInstance
+                      Id="16cc35c9-650e-4448-b980-c0da6a3fbed7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a5cb127-a85a-4a8b-b84d-ca922c29baca">
+                    <propertyInstance
+                      Id="6da75bb4-4624-483c-bf1e-78bd2d5318d7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e883e72-86b3-4d4f-9e2c-0a294b5f5df6">
+                    <propertyInstance
+                      Id="074db755-69d3-4728-8d21-739ae7ddf055"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f976aa3-a987-40e3-8279-0025dc00faaa">
+                    <propertyInstance
+                      Id="042c52ad-c559-49d6-9363-ed139ad15536"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40d1d912-931e-477d-ba46-c55632ba5fed">
+                    <propertyInstance
+                      Id="7a6615bc-c47e-4099-a3bc-f6e9d6cd73f2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ba8fbb9-a9bc-465f-a4e5-534d5dae2ccc"
+                  name="gameTime"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fca3c45d-f12c-4d47-8ae9-a33aa4d1f329"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.Game.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DGameTime)]) ParameterIdentifier%3DgameTime"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ee59a131-027b-4f55-b8de-6bd6bacbd092"
+                      LastKnownName="GameTime"
+                      LastKnownLocation="Package3_1852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e06ca749-aed6-446d-91ca-8771612ac4e3"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bbe997db-3863-43ff-96ad-76306e1c99d5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D(Name%3DUpdate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.Game.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DGameTime)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5c772d2c-ecf2-44d4-b82a-050ddd036746"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7da62d5e-5b62-4e3c-8b3e-bad05b9cd8a9">
+                    <propertyInstance
+                      Id="23ddb4f3-7886-453d-9865-840bbfb67e2f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f38655ab-1589-40da-8eef-41c5bbfa55d8">
+                    <propertyInstance
+                      Id="18a7ef17-32f5-4cb3-a0c0-50b5f732f11b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecab7d54-6b19-406b-8c84-47b4c30d4fb5">
+                    <propertyInstance
+                      Id="17df43d7-aef8-4a7e-8df5-5c751f930272"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dc54cd5-9d64-4c5b-a6cc-15af8033e2a3">
+                    <propertyInstance
+                      Id="6e3be71a-2d59-443a-b16e-f94c37457ed1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="915cbd54-1e52-4b50-8012-08af80e387fe">
+                    <propertyInstance
+                      Id="494d1d30-f51d-467b-b04f-bfab79aa1c59"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fa57ea5-32b8-40b5-8a2b-4f44230bd521">
+                    <propertyInstance
+                      Id="e2b93102-a8f7-4db4-8f8c-c8e0e92c5654"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1ef9529-cc1f-4f1f-895f-20beb5608549"
+                  name="gameTime"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d1474078-ee69-4c85-a7cb-42cdb860d59e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D(Name%3DUpdate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.Game.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DGameTime)]) ParameterIdentifier%3DgameTime"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ee59a131-027b-4f55-b8de-6bd6bacbd092"
+                      LastKnownName="GameTime"
+                      LastKnownLocation="Package3_1852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f0f3cb41-27c0-480d-8cb6-ef0c7c517f4d"
+            name="createPlayerBullet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1f739896-51e9-4eca-b4ef-83ed588383ab"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D(Name%3DcreatePlayerBullet OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ammo Type%3DAmmo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DVector2)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f5e80c0c-1151-4091-bc60-cf5a39ed7c4c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b62e8319-a307-4447-b8fc-cf82c42a97f7">
+                    <propertyInstance
+                      Id="c66642f1-29c1-4c80-b803-4071df10043c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a48ad272-09c0-47e7-924f-3c9c3dda48fa">
+                    <propertyInstance
+                      Id="205bab14-c215-4b95-bf1a-b4a032500e45"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fdbf4c8-d6dc-47d2-ae1c-cf29b54dd20f">
+                    <propertyInstance
+                      Id="ba7aed53-347c-4323-a003-b5cd5f69e06d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ea330b7-ba56-44ab-bb27-28564d8b625b">
+                    <propertyInstance
+                      Id="c3b43b45-13c4-472f-ada8-7eeff9f0efd2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67851c79-3522-458c-96fe-28061dbe9d3a">
+                    <propertyInstance
+                      Id="114b7beb-2734-47b7-ac07-67a6d1d7a5d4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01ed3332-724a-4050-860e-302752f4fd25">
+                    <propertyInstance
+                      Id="fc354e80-21e1-42e0-9707-634e63e15514"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e268231a-16d1-4851-8f10-90e626eb8456"
+                  name="ammo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7e75cde1-7619-4d8c-808c-f8980bf3bb46"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D(Name%3DcreatePlayerBullet OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ammo Type%3DAmmo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DVector2)]) ParameterIdentifier%3Dammo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f83161d1-58ba-4a27-b8e7-f71c9cae5367"
+                      LastKnownName="Ammo"
+                      LastKnownLocation="Package1_2107.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="87ea97cc-a010-45f3-8640-f6f3c24f1418"
+                  name="p"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b815de22-b778-4ede-a927-448a20676ffa"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D(Name%3DcreatePlayerBullet OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ammo Type%3DAmmo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DVector2)]) ParameterIdentifier%3Dp"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2f28e7e0-1e48-4f8c-88f2-91ddb8f1e276"
+                      LastKnownName="Vector2"
+                      LastKnownLocation="Package3_1852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="60515e7e-1162-4a99-8078-d38cf6538a50"
+            name="BulletManager"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="db78a399-fce9-4278-86fd-dccd0a29266c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DBulletManager Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fb2eced5-8d05-48ee-97c4-326eb71ce5a0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5cc6f495-2f1b-4069-95a4-c1435030af53">
+                    <propertyInstance
+                      Id="b47ff03b-1e16-46b2-a0cf-d1b0189f303b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68626d2e-a09e-415d-a283-bf9d8e4bc050">
+                    <propertyInstance
+                      Id="766d7f45-c57e-4620-ac9c-f7af980f2f4c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93990321-7bee-4724-aef8-c1cbae3d57fc">
+                    <propertyInstance
+                      Id="55a34d48-0f13-42e8-b0dd-75ecc30aea49"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f924cc7-9b24-49c5-a275-2b62435951af">
+                    <propertyInstance
+                      Id="86ae41e0-f2ea-4b4b-8b55-1c30b4ea7e26"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a8e9922-623c-45e7-93b5-2b6b478e8844">
+                    <propertyInstance
+                      Id="30e318fc-993e-4308-bfe6-6ad9e7fe07d5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77827767-6f60-4d71-91a6-df4b4f655795">
+                    <propertyInstance
+                      Id="85437190-0da6-4d73-b016-6c962cf6d519"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

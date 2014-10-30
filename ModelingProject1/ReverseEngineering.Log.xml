@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-10-30T14:47:41" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Content' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Content::ContentManager' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Game' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::GameTime' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Graphics' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Graphics::SpriteBatch' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Graphics::Texture2D' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Graphics::Viewport' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::GraphicsDeviceManager' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Rectangle' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Microsoft::Xna::Framework::Vector2' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy::BaseEnemy' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy::entityOffset' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy::LoadContent::_viewport' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy::setOffset' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy::setOffset::x' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BaseEnemy::setOffset::y' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::behaviour' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::behaviour::Sequence' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::behaviour::Sequence::Sequence' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BlueShip' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::BlueShip::BlueShip' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Controllable' -  (Interface)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Controllable::OnLeftDown' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Controllable::OnLeftUp' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Controllable::OnRightDown' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Controllable::OnSpaceDown' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Drawable' -  (Interface)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Drawable::Draw' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Drawable::Draw::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::Draw' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::Draw::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::enemies' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::EnemyManager' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::EnemyManager::amount' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::maxEnemyWidth' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::sideReached' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::Update' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::EnemyManager::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::ammo' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::ammo::Ammo' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::ammo::Ammo::Ammo' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::ammo::Ammo::Fire' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::ammo::Ammo::Fire::p' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::BoundEntity' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::BoundEntity::BoundEntity' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::BoundEntity::getSafeBounds' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::BoundEntity::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::BoundEntity::safeBounds' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::BoundEntity::Update' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::entities::BoundEntity::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::active' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::Draw' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::Draw::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::Entity' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::entityPosition' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::entitySpeed' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::entityTexture' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::entityTextureName' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::getPosition' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::getSpeed' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::getTexture' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::setSpeed' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::setSpeed::x' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::setSpeed::y' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::Update' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Entity::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::FastEnemy' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::FastEnemy::FastEnemy' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Loadable' -  (Interface)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Loadable::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Program' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Program::Main' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Program::Main::args' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::ammoType' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::Draw' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::Draw::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::movementSpeed' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::moving' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::Ship' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::Update' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Ship::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::content' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::Draw' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::Draw::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::entityManager' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::graphics' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::Initialize' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::ship' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::Space' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::spriteBatch' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::UnloadContent' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::Update' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::UpdateBullets' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Space::viewport' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::StrongEnemy' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::StrongEnemy::StrongEnemy' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Updatable' -  (Interface)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Updatable::Update' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::Updatable::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager' -  (Class)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::BulletManager' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::createPlayerBullet' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::createPlayerBullet::ammo' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::createPlayerBullet::p' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::Draw' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::Draw::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::playerBulletCount' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::playerBullets' -  (Property)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::Update' -  (Operation)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::SpaceInvaders::world::BulletManager::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System' -  (Package)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Single' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::EnemyManager to ModelingProject1::SpaceInvaders::Loadable (InterfaceRealization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::EnemyManager to ModelingProject1::SpaceInvaders::Updatable (InterfaceRealization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::EnemyManager to ModelingProject1::SpaceInvaders::Drawable (InterfaceRealization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::Entity to ModelingProject1::SpaceInvaders::Loadable (InterfaceRealization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::Entity to ModelingProject1::SpaceInvaders::Updatable (InterfaceRealization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::Entity to ModelingProject1::SpaceInvaders::Drawable (InterfaceRealization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::FastEnemy to ModelingProject1::SpaceInvaders::BaseEnemy (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::Ship to ModelingProject1::SpaceInvaders::entities::BoundEntity (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::Space to ModelingProject1::Microsoft::Xna::Framework::Game (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::StrongEnemy to ModelingProject1::SpaceInvaders::BaseEnemy (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::entities::ammo::Ammo to ModelingProject1::SpaceInvaders::Entity (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::BaseEnemy to ModelingProject1::SpaceInvaders::entities::BoundEntity (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::BlueShip to ModelingProject1::SpaceInvaders::Ship (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::SpaceInvaders::entities::BoundEntity to ModelingProject1::SpaceInvaders::Entity (Generalization)" />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="High" Text="(16) type(s) fully reverse engineered." />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="High" Text="(11) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2014-10-30T14:47:47" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
