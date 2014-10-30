@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using SpaceInvaders.world;
 using SpaceInvaders.managers;
+using SpaceInvaders.entities.ship;
 
 namespace SpaceInvaders
 {
@@ -21,7 +22,7 @@ namespace SpaceInvaders
         public static Viewport viewport;
         public static BulletManager bulletManager;
 
-        Ship ship;
+        ShipBase ship;
         EnemyManager entityManager;
         CollisionManager collisionManager;
 
@@ -48,7 +49,8 @@ namespace SpaceInvaders
             spriteBatch = new SpriteBatch(GraphicsDevice);
             viewport = GraphicsDevice.Viewport;
 
-            ship = new BlueShip();
+            ship = new ShipBase();
+            ship = new TextureDecorator(ship);
             ship.LoadContent();
 
             

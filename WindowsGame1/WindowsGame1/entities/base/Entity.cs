@@ -36,9 +36,10 @@ namespace SpaceInvaders
 
         public void Update(GameTime gameTime)
         {
+            entityPosition += entitySpeed;
+
             if (active)
             {
-                entityPosition += entitySpeed;
                 bounds = new Rectangle((int)(entityPosition.X - entityTexture.Width / 2), (int)(entityPosition.Y - entityTexture.Height / 2), entityTexture.Width, entityTexture.Height);
             }
         }

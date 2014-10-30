@@ -78,7 +78,6 @@
     <Compile Include="entities\ammo\Ammo.cs" />
     <Compile Include="entities\enemy\BaseEnemy.cs" />
     <Compile Include="entities\base\BoundEntity.cs" />
-    <Compile Include="entities\ship\BlueShip.cs" />
     <Compile Include="entities\enemy\FastEnemy.cs" />
     <Compile Include="entities\enemy\StrongEnemy.cs" />
     <Compile Include="entities\interface\Loadable.cs" />
@@ -86,6 +85,10 @@
     <Compile Include="entities\interface\Controllable.cs" />
     <Compile Include="entities\interface\Drawable.cs" />
     <Compile Include="entities\interface\Updatable.cs" />
+    <Compile Include="entities\ship\BonusDecorators.cs" />
+    <Compile Include="entities\ship\Ship.cs" />
+    <Compile Include="entities\ship\ShipBase.cs" />
+    <Compile Include="entities\ship\ShipDecorator.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="managers\CollisionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,7 +96,6 @@
     <Compile Include="managers\EnemyManager.cs" />
     <Compile Include="managers\BulletManager.cs" />
     <Compile Include="world\Space.cs" />
-    <Compile Include="entities\ship\Ship.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

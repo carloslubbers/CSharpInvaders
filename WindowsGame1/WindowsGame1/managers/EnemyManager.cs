@@ -1,5 +1,7 @@
-﻿using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +61,17 @@ namespace SpaceInvaders
 
             foreach (BaseEnemy e in enemies)
             {
+                KeyboardState ks = Keyboard.GetState(PlayerIndex.One);
+                if (ks.IsKeyDown(Keys.R))
+                {
+                    foreach (Entity _e in enemies)
+                    {
+                        if (_e != null)
+                        {
+                            _e.setActive(true);
+                        }
+                    }
+                }
                 e.Update(gameTime);
             }
         }
