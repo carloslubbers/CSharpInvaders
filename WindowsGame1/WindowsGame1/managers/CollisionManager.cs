@@ -20,24 +20,24 @@ namespace SpaceInvaders.managers
         public void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             Ammo[] bullets = bulletManager.getPlayerBullets();
-            Entity[] enemies = enemyManager.getEnemies();
+            BaseEnemy[] enemies = enemyManager.getEnemies();
 
             foreach (Ammo a in bullets)
             {
                 if (a != null)
                 {
-                    if (a.isActive())
+                    if (a.active)
                     {
-                        foreach (Entity e in enemies)
+                        foreach (BaseEnemy e in enemies)
                         {
                             if (e != null)
                             {
-                                if (e.isActive())
+                                if (e.active)
                                 {
-                                    if (a.getBounds().Intersects(e.getBounds()))
+                                    if (a.textureComponent.bounds.Intersects(e.textureComponent.bounds))
                                     {
-                                        a.setActive(false);
-                                        e.setActive(false);
+                                        a.active = false;
+                                        e.active = false;
                                     }
                                 }
                             }

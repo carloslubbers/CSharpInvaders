@@ -8,6 +8,7 @@ using System.Timers;
 
 namespace SpaceInvaders.world
 {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
     public class BulletManager
     {
         Ammo[] playerBullets;

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SpaceInvaders
 {
-    interface Loadable
+    public interface Loadable
     {
         void LoadContent();
     }

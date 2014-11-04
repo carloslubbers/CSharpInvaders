@@ -22,7 +22,7 @@ namespace SpaceInvaders
             {
                 switch (i / maxEnemyWidth)
                 {
-                    case 0:
+                   /** case 0:
                         enemies[i] = new StrongEnemy();
                         break;
                     case 1:
@@ -30,11 +30,20 @@ namespace SpaceInvaders
                         break;
                     case 2:
                         enemies[i] = new BaseEnemy();
-                        break;
+                        break;*/
                     default:
                         enemies[i] = new BaseEnemy();
                         break;
                 }
+            }
+
+        }
+
+        public void Initialize()
+        {
+            foreach (BaseEnemy e in enemies)
+            {
+                e.Initialize();
             }
         }
 
@@ -45,13 +54,12 @@ namespace SpaceInvaders
             {
                 if (entityID == 0 || entityID == (maxEnemyWidth-1))
                 {
-                    
                     // Change X direction when screen edge has been reached
-                    if (e.getSafeBounds().Left == e.getPosition().X || e.getSafeBounds().Right - e.getTexture().Width == e.getPosition().X)
+                    if (e.boundaryComponent.getSafeBounds().Left == e.positionComponent.entityPosition.X || e.boundaryComponent.getSafeBounds().Right - e.textureComponent.texture.Width == e.positionComponent.entityPosition.X)
                     {
                         foreach (BaseEnemy e2 in enemies)
                         {
-                            e2.setSpeed(e2.getSpeed().X * -1, e2.getSpeed().Y);
+                            e2.positionComponent.entitySpeed.X = e2.positionComponent.entitySpeed.X * -1;
                         }
                     }
                 }
@@ -64,11 +72,11 @@ namespace SpaceInvaders
                 KeyboardState ks = Keyboard.GetState(PlayerIndex.One);
                 if (ks.IsKeyDown(Keys.R))
                 {
-                    foreach (Entity _e in enemies)
+                    foreach (BaseEnemy _e in enemies)
                     {
                         if (_e != null)
                         {
-                            _e.setActive(true);
+                            _e.active = true;
                         }
                     }
                 }
@@ -82,9 +90,8 @@ namespace SpaceInvaders
             foreach(BaseEnemy e in enemies) {
                 
                 // Calculate offset for enemy
-                e.setOffset(75.0f * (float)(entityID%maxEnemyWidth), 10.0f + (entityID / maxEnemyWidth)*50.0f);
+                e.offsetComponent.setOffset(75.0f * (float)(entityID % maxEnemyWidth), 10.0f + (entityID / maxEnemyWidth) * 50.0f);
                 entityID++;
-
                 e.LoadContent();
             }
         }
@@ -101,11 +108,11 @@ namespace SpaceInvaders
         {
             foreach (BaseEnemy e in enemies)
             {
-                e.setSpeed(e.getSpeed().X * -1, e.getSpeed().Y);
+                e.positionComponent.entitySpeed.X = e.positionComponent.entitySpeed.X * -1;
             }
         }
 
-        public Entity[] getEnemies()
+        public BaseEnemy[] getEnemies()
         {
             return enemies;
         }

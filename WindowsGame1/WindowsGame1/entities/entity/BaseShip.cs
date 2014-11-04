@@ -1,58 +1,53 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using SpaceInvaders.entities;
-using SpaceInvaders.entities.ammo;
+using Microsoft.Xna.Framework.Content;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework.Input;
+using SpaceInvaders.entities.ammo;
+using SpaceInvaders.entities;
 
 namespace SpaceInvaders
 {
-    class BaseEnemy : Entity
+    class BaseShip : Entity
     {
         public PositionComponent positionComponent;
         public TextureComponent textureComponent;
-        public OffsetComponent offsetComponent;
-        public BoundaryComponent boundaryComponent;
+        public InputComponent inputComponent;
+        public FiringComponent firingComponent;
 
-        public bool active = true;
-
-        public BaseEnemy()
+        public BaseShip()
         {
             positionComponent = new PositionComponent(this);
             textureComponent = new TextureComponent(this, positionComponent);
-            offsetComponent = new OffsetComponent(this, positionComponent);
-            boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
+            firingComponent = new FiringComponent(this, positionComponent);
+            inputComponent = new InputComponent(this, positionComponent, firingComponent);
         }
 
         public void Initialize()
         {
-            textureComponent.setTexture("enemy1Texture");
-            positionComponent.entitySpeed.X = 3.0f;
+            textureComponent.setTexture("shipTexture");
+            positionComponent.entityPosition.Y = 800.0f;
         }
         
         public void LoadContent()
         {
             positionComponent.LoadContent();
             textureComponent.LoadContent();
-            offsetComponent.LoadContent();
-            boundaryComponent.LoadContent();
         }
 
         public void Update(GameTime gameTime)
         {
             positionComponent.Update(gameTime);
             textureComponent.Update(gameTime);
+            inputComponent.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime)
         {
-            if (active)
-            {
-                textureComponent.Draw(gameTime);
-            }
+            textureComponent.Draw(gameTime);
         }
     }
 }

@@ -10,7 +10,6 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using SpaceInvaders.world;
 using SpaceInvaders.managers;
-using SpaceInvaders.entities.ship_dec;
 
 namespace SpaceInvaders
 {
@@ -21,7 +20,7 @@ namespace SpaceInvaders
         public static ContentManager content;
         public static Viewport viewport;
         public static BulletManager bulletManager;
-        ShipDecorator db;
+        BaseShip db;
         EnemyManager entityManager;
         CollisionManager collisionManager;
 
@@ -33,7 +32,8 @@ namespace SpaceInvaders
             graphics.PreferredBackBufferHeight = 920;
             graphics.PreferredBackBufferWidth = 1800;
             Content.RootDirectory = "Content";
-            
+
+            db = new BaseShip();
         }
 
         // Allows the game to perform any initialization it needs to before starting to run.
@@ -41,6 +41,7 @@ namespace SpaceInvaders
         {
             base.Initialize();
             db.Initialize();
+            entityManager.Initialize();
         }
 
         // Load all the game content
@@ -50,9 +51,7 @@ namespace SpaceInvaders
             spriteBatch = new SpriteBatch(GraphicsDevice);
             viewport = GraphicsDevice.Viewport;
 
-            EntityComponent ship = new EntityComponent();
-            db = new ShipDecorator();
-            db.SetComponent(ship);
+            
             db.LoadContent();
 
             
