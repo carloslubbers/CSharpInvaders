@@ -87,7 +87,7 @@
     <Compile Include="entities\entity\InputComponent.cs" />
     <Compile Include="entities\entity\PositionComponent.cs" />
     <Compile Include="entities\entity\AbstractComponent.cs" />
-    <Compile Include="entities\entity\BaseShip.cs" />
+    <Compile Include="entities\ship\BaseShip.cs" />
     <Compile Include="entities\entity\TextureComponent.cs" />
     <Compile Include="managers\CollisionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

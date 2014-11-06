@@ -22,17 +22,21 @@ namespace SpaceInvaders
             {
                 switch (i / maxEnemyWidth)
                 {
-                   /** case 0:
-                        enemies[i] = new StrongEnemy();
+                    case 0:
+                        enemies[i] = new BaseEnemy();
+                        enemies[i].textureComponent.setTexture("enemy1Texture");
                         break;
                     case 1:
-                        enemies[i] = new FastEnemy();
+                        enemies[i] = new BaseEnemy();
+                        enemies[i].textureComponent.setTexture("enemy2Texture");
                         break;
                     case 2:
                         enemies[i] = new BaseEnemy();
-                        break;*/
+                        enemies[i].textureComponent.setTexture("enemy3Texture");
+                        break;
                     default:
                         enemies[i] = new BaseEnemy();
+                        enemies[i].textureComponent.setTexture("enemy1Texture");
                         break;
                 }
             }
@@ -88,7 +92,6 @@ namespace SpaceInvaders
         {
             int entityID = 0;
             foreach(BaseEnemy e in enemies) {
-                
                 // Calculate offset for enemy
                 e.offsetComponent.setOffset(75.0f * (float)(entityID % maxEnemyWidth), 10.0f + (entityID / maxEnemyWidth) * 50.0f);
                 entityID++;
@@ -101,14 +104,6 @@ namespace SpaceInvaders
             foreach (BaseEnemy e in enemies)
             {
                 e.Draw(gameTime);
-            }
-        }
-
-        protected void sideReached()
-        {
-            foreach (BaseEnemy e in enemies)
-            {
-                e.positionComponent.entitySpeed.X = e.positionComponent.entitySpeed.X * -1;
             }
         }
 

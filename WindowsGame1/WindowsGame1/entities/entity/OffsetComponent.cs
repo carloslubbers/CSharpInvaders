@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SpaceInvaders.entities
 {
-    public class OffsetComponent : Component
+    public class OffsetComponent : AbstractComponent
     {
         Entity baseEntity;
         PositionComponent pos;

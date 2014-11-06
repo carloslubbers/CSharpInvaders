@@ -17,6 +17,7 @@ namespace SpaceInvaders
         public TextureComponent textureComponent;
         public InputComponent inputComponent;
         public FiringComponent firingComponent;
+        public BoundaryComponent boundaryComponent;
 
         public BaseShip()
         {
@@ -24,25 +25,28 @@ namespace SpaceInvaders
             textureComponent = new TextureComponent(this, positionComponent);
             firingComponent = new FiringComponent(this, positionComponent);
             inputComponent = new InputComponent(this, positionComponent, firingComponent);
+            boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
         }
 
         public void Initialize()
         {
             textureComponent.setTexture("shipTexture");
-            positionComponent.entityPosition.Y = 800.0f;
         }
         
         public void LoadContent()
         {
             positionComponent.LoadContent();
             textureComponent.LoadContent();
+            boundaryComponent.LoadContent();
         }
 
         public void Update(GameTime gameTime)
         {
+            positionComponent.entityPosition.Y = Space.viewport.Height-textureComponent.texture.Height;
             positionComponent.Update(gameTime);
             textureComponent.Update(gameTime);
             inputComponent.Update(gameTime);
+            boundaryComponent.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime)

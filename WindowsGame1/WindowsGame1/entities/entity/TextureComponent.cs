@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SpaceInvaders.entities
 {
-    public class TextureComponent : Component
+    public class TextureComponent : AbstractComponent
     {
         private string textureName;
 
@@ -44,6 +44,7 @@ namespace SpaceInvaders.entities
         public void setTexture(String _name)
         {
             textureName = _name;
+            Console.WriteLine(_name);
             texture = Space.content.Load<Texture2D>(textureName);
         }
     }

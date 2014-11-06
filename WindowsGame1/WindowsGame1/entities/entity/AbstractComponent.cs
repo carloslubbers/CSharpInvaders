@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SpaceInvaders.entities
 {
-    public abstract class Component : Updatable, Drawable, Loadable
+    public abstract class AbstractComponent : Updatable, Drawable, Loadable
     {
         public abstract void LoadContent();
         public abstract void Draw(GameTime gameTime);

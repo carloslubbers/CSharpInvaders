@@ -13,13 +13,13 @@ namespace SpaceInvaders.entities.ammo
         public PositionComponent positionComponent;
         public TextureComponent textureComponent;
 
-        public bool active;
+        public bool active = false;
         public Ammo()
         {
             positionComponent = new PositionComponent(this);
             textureComponent = new TextureComponent(this, positionComponent);
             textureComponent.setTexture("ammoTexture");
-            positionComponent.entitySpeed.Y = -10.0f;
+            positionComponent.entitySpeed.Y = -15.0f;
         }
 
         public void Fire(Vector2 p) {
@@ -41,8 +41,6 @@ namespace SpaceInvaders.entities.ammo
         public void LoadContent()
         {
             textureComponent.LoadContent();
-            positionComponent.entitySpeed.Y = -10.0f;
-            active = false;
         }
 
         public void Draw(GameTime gameTime)

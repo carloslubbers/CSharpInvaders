@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SpaceInvaders.entities
 {
-    public class InputComponent : Component
+    public class InputComponent : AbstractComponent
     {
         private bool moving = false;
         public float movementSpeed = 5.0f;

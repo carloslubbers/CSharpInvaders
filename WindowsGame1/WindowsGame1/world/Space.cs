@@ -20,7 +20,7 @@ namespace SpaceInvaders
         public static ContentManager content;
         public static Viewport viewport;
         public static BulletManager bulletManager;
-        BaseShip db;
+        BaseShip ship;
         EnemyManager entityManager;
         CollisionManager collisionManager;
 
@@ -32,29 +32,25 @@ namespace SpaceInvaders
             graphics.PreferredBackBufferHeight = 920;
             graphics.PreferredBackBufferWidth = 1800;
             Content.RootDirectory = "Content";
-
-            db = new BaseShip();
         }
 
         // Allows the game to perform any initialization it needs to before starting to run.
         protected override void Initialize()
         {
             base.Initialize();
-            db.Initialize();
+
+            ship.Initialize();
             entityManager.Initialize();
         }
 
         // Load all the game content
         protected override void LoadContent()
         {
-            Console.WriteLine("lc");
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            viewport = GraphicsDevice.Viewport;
 
-            
-            db.LoadContent();
+            ship = new BaseShip();
+            ship.LoadContent();
 
-            
             entityManager = new EnemyManager(120);
             entityManager.LoadContent();
 
@@ -70,12 +66,13 @@ namespace SpaceInvaders
         // checking for collisions, gathering input, and playing audio.
         protected override void Update(GameTime gameTime)
         {
+            viewport = GraphicsDevice.Viewport;
             // Allows the game to exit
             if(Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape)) 
                 this.Exit();
 
-            // Update entities
-            db.Update(gameTime);
+            // Update game elements
+            ship.Update(gameTime);
             entityManager.Update(gameTime);
             bulletManager.Update(gameTime);
             collisionManager.Update(gameTime);
@@ -85,9 +82,11 @@ namespace SpaceInvaders
         // This is called when the game should draw itself.
         protected override void Draw(GameTime gameTime)
         {
+            // The background is black
             GraphicsDevice.Clear(Color.Black);
 
-            db.Draw(gameTime);
+            // Update game elements
+            ship.Draw(gameTime);
             entityManager.Draw(gameTime);
             bulletManager.Draw(gameTime);
             base.Draw(gameTime);

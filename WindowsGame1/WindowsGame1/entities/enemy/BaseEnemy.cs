@@ -29,7 +29,6 @@ namespace SpaceInvaders
 
         public void Initialize()
         {
-            textureComponent.setTexture("enemy1Texture");
             positionComponent.entitySpeed.X = 3.0f;
         }
         
@@ -45,6 +44,7 @@ namespace SpaceInvaders
         {
             positionComponent.Update(gameTime);
             textureComponent.Update(gameTime);
+            boundaryComponent.Update(gameTime);
         }
 
         public void Draw(GameTime gameTime)
