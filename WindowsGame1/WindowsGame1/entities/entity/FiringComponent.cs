@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SpaceInvaders.entities
 {
-    public class FiringComponent
+    public class FiringComponent : AbstractComponent
     {
         public String ammoType = "default";
         PositionComponent pos;
@@ -28,5 +28,15 @@ namespace SpaceInvaders.entities
             }
             Space.bulletManager.createPlayerBullet(new Ammo(), pos.entityPosition);
         }
+
+        public void setDelay(int d) {
+            Space.bulletManager.setDelay(d);
+        }
+
+        public override void LoadContent() { }
+
+        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime) { }
+
+        public override void Update(Microsoft.Xna.Framework.GameTime gameTime) { }
     }
 }

@@ -20,6 +20,7 @@ namespace SpaceInvaders
         public static ContentManager content;
         public static Viewport viewport;
         public static BulletManager bulletManager;
+        public static ScoreManager scoreManager;
         BaseShip ship;
         EnemyManager entityManager;
         CollisionManager collisionManager;
@@ -57,6 +58,8 @@ namespace SpaceInvaders
             bulletManager = new BulletManager();
 
             collisionManager = new CollisionManager(bulletManager, entityManager);
+
+            scoreManager = new ScoreManager(ship);
         }
 
         // Unload all the game content
@@ -84,6 +87,12 @@ namespace SpaceInvaders
         {
             // The background is black
             GraphicsDevice.Clear(Color.Black);
+
+            // TODO: Manage the UI somewhere else
+            spriteBatch.Begin();
+            spriteBatch.DrawString(Content.Load<SpriteFont>("Segoe UI Mono"), "Score: " + scoreManager.score, new Vector2(graphics.GraphicsDevice.Viewport.Width / 2,
+        graphics.GraphicsDevice.Viewport.Height / 2), Color.White, 0, Content.Load<SpriteFont>("Segoe UI Mono").MeasureString("Score: " + scoreManager.score) / 2, 1.0f, SpriteEffects.None, 0.5f);
+            spriteBatch.End();
 
             // Update game elements
             ship.Draw(gameTime);

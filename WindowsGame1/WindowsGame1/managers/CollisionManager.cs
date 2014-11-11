@@ -1,4 +1,5 @@
-﻿using SpaceInvaders.entities.ammo;
+﻿using SpaceInvaders.entities;
+using SpaceInvaders.entities.ammo;
 using SpaceInvaders.world;
 using System;
 using System.Collections.Generic;
@@ -34,10 +35,13 @@ namespace SpaceInvaders.managers
                             {
                                 if (e.active)
                                 {
-                                    if (a.textureComponent.bounds.Intersects(e.textureComponent.bounds))
+                                    TextureComponent tc = (TextureComponent)e.components["texture"];
+                                    if (a.textureComponent.bounds.Intersects(tc.bounds))
                                     {
                                         a.active = false;
                                         e.active = false;
+
+                                        Space.scoreManager.AddScore(1);
                                     }
                                 }
                             }

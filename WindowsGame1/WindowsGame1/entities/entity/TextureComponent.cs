@@ -44,7 +44,6 @@ namespace SpaceInvaders.entities
         public void setTexture(String _name)
         {
             textureName = _name;
-            Console.WriteLine(_name);
             texture = Space.content.Load<Texture2D>(textureName);
         }
     }

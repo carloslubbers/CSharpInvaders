@@ -90,6 +90,7 @@
     <Compile Include="entities\ship\BaseShip.cs" />
     <Compile Include="entities\entity\TextureComponent.cs" />
     <Compile Include="managers\CollisionManager.cs" />
+    <Compile Include="managers\ScoreManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="managers\EnemyManager.cs" />

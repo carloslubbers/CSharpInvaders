@@ -11,47 +11,58 @@ using SpaceInvaders.entities;
 
 namespace SpaceInvaders
 {
-    class BaseShip : Entity
+    public class BaseShip : Entity
     {
-        public PositionComponent positionComponent;
-        public TextureComponent textureComponent;
-        public InputComponent inputComponent;
-        public FiringComponent firingComponent;
-        public BoundaryComponent boundaryComponent;
+        public Dictionary<String, AbstractComponent> components;
 
         public BaseShip()
         {
-            positionComponent = new PositionComponent(this);
-            textureComponent = new TextureComponent(this, positionComponent);
-            firingComponent = new FiringComponent(this, positionComponent);
-            inputComponent = new InputComponent(this, positionComponent, firingComponent);
-            boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
+            components = new Dictionary<string, AbstractComponent>();
+            PositionComponent positionComponent = new PositionComponent(this);
+            TextureComponent textureComponent = new TextureComponent(this, positionComponent);
+            OffsetComponent offsetComponent = new OffsetComponent(this, positionComponent);
+            BoundaryComponent boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
+            FiringComponent firingComponent = new FiringComponent(this, positionComponent);
+            InputComponent inputComponent = new InputComponent(this, positionComponent, firingComponent);
+
+            components.Add("position", positionComponent);
+            components.Add("texture", textureComponent);
+            components.Add("offset", offsetComponent);
+            components.Add("boundary", boundaryComponent);
+            components.Add("firing", firingComponent);
+            components.Add("input", inputComponent);
         }
 
         public void Initialize()
         {
-            textureComponent.setTexture("shipTexture");
+            TextureComponent tc = (TextureComponent) components["texture"];
+            tc.setTexture("shipTexture");
         }
         
         public void LoadContent()
         {
-            positionComponent.LoadContent();
-            textureComponent.LoadContent();
-            boundaryComponent.LoadContent();
+            foreach(KeyValuePair<string, AbstractComponent> kv in components) {
+                kv.Value.LoadContent();
+            }
         }
 
         public void Update(GameTime gameTime)
         {
-            positionComponent.entityPosition.Y = Space.viewport.Height-textureComponent.texture.Height;
-            positionComponent.Update(gameTime);
-            textureComponent.Update(gameTime);
-            inputComponent.Update(gameTime);
-            boundaryComponent.Update(gameTime);
+            PositionComponent pc = (PositionComponent) components["position"];
+            TextureComponent tc = (TextureComponent)components["texture"];
+            pc.entityPosition.Y = Space.viewport.Height-tc.texture.Height;
+            foreach (KeyValuePair<string, AbstractComponent> kv in components)
+            {
+                kv.Value.Update(gameTime);
+            }
         }
 
         public void Draw(GameTime gameTime)
         {
-            textureComponent.Draw(gameTime);
+            foreach (KeyValuePair<string, AbstractComponent> kv in components)
+            {
+                kv.Value.Draw(gameTime);
+            }
         }
     }
 }

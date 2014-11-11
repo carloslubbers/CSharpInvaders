@@ -12,46 +12,53 @@ namespace SpaceInvaders
 {
     class BaseEnemy : Entity
     {
-        public PositionComponent positionComponent;
-        public TextureComponent textureComponent;
-        public OffsetComponent offsetComponent;
-        public BoundaryComponent boundaryComponent;
-
+        public Dictionary<String, AbstractComponent> components;
         public bool active = true;
 
         public BaseEnemy()
         {
-            positionComponent = new PositionComponent(this);
-            textureComponent = new TextureComponent(this, positionComponent);
-            offsetComponent = new OffsetComponent(this, positionComponent);
-            boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
+            components = new Dictionary<string, AbstractComponent>();
+            PositionComponent positionComponent = new PositionComponent(this);
+            TextureComponent textureComponent = new TextureComponent(this, positionComponent);
+            OffsetComponent offsetComponent = new OffsetComponent(this, positionComponent);
+            BoundaryComponent boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
+
+            components.Add("position", positionComponent);
+            components.Add("texture",  textureComponent);
+            components.Add("offset", offsetComponent);
+            components.Add("boundary", boundaryComponent);
         }
 
         public void Initialize()
         {
-            positionComponent.entitySpeed.X = 3.0f;
+            PositionComponent pc = (PositionComponent) components["position"];
+            pc.entitySpeed.X = 3.0f;
         }
         
         public void LoadContent()
         {
-            positionComponent.LoadContent();
-            textureComponent.LoadContent();
-            offsetComponent.LoadContent();
-            boundaryComponent.LoadContent();
+            foreach (KeyValuePair<string, AbstractComponent> ac in components)
+            {
+                ac.Value.LoadContent();
+            }
         }
 
         public void Update(GameTime gameTime)
         {
-            positionComponent.Update(gameTime);
-            textureComponent.Update(gameTime);
-            boundaryComponent.Update(gameTime);
+            foreach (KeyValuePair<string, AbstractComponent> ac in components)
+            {
+                ac.Value.Update(gameTime);
+            }
         }
 
         public void Draw(GameTime gameTime)
         {
             if (active)
             {
-                textureComponent.Draw(gameTime);
+                foreach (KeyValuePair<string, AbstractComponent> ac in components)
+                {
+                    ac.Value.Draw(gameTime);
+                }
             }
         }
     }

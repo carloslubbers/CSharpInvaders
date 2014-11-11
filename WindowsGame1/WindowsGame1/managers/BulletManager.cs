@@ -14,6 +14,7 @@ namespace SpaceInvaders.world
         Ammo[] playerBullets;
         int playerBulletCount = 0;
         Timer timer;
+        int timerDelay = 250;
         static Boolean ready = true;
 
         public BulletManager()
@@ -21,7 +22,7 @@ namespace SpaceInvaders.world
             playerBullets = new Ammo[100];
             timer = new Timer();
             timer.Elapsed += new ElapsedEventHandler(TimerFinished);
-            timer.Interval = 250;
+            timer.Interval = timerDelay;
             timer.Enabled = true;
         }
 
@@ -77,6 +78,12 @@ namespace SpaceInvaders.world
         public Ammo[] getPlayerBullets()
         {
             return playerBullets;
+        }
+
+        public void setDelay(int d)
+        {
+            timerDelay = d;
+            timer.Interval = d;
         }
     }
 }
