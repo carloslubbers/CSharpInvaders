@@ -1,47 +1,44 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
+﻿using System.Linq;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using SpaceInvaders.entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SpaceInvaders.entities.enemy;
+using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.@interface;
+using IDrawable = SpaceInvaders.entities.@interface.IDrawable;
 
-namespace SpaceInvaders
+namespace SpaceInvaders.managers
 {
-    class EnemyManager : Drawable, Updatable, Loadable
+    class EnemyManager : IDrawable, IUpdatable, ILoadable
     {
-
-        BaseEnemy[] enemies;
-        const int maxEnemyWidth = 15;
+        readonly BaseEnemy[] _enemies;
+        const int MaxEnemyWidth = 15;
 
         public EnemyManager(int amount)
         {
-            enemies = new BaseEnemy[amount];
-            for (int i = 0; i < enemies.Length; i++)
+            _enemies = new BaseEnemy[amount];
+            for (var i = 0; i < _enemies.Length; i++)
             {
-                switch (i / maxEnemyWidth)
+                switch (i / MaxEnemyWidth)
                 {
                     case 0:
-                        enemies[i] = new BaseEnemy();
-                        TextureComponent tc1 = (TextureComponent)enemies[i].components["texture"];
-                        tc1.setTexture("enemy1Texture");
+                        _enemies[i] = new BaseEnemy();
+                        var tc1 = (TextureComponent)_enemies[i].Components["texture"];
+                        tc1.SetTexture("enemy1Texture");
                         break;
                     case 1:
-                        enemies[i] = new BaseEnemy();
-                        TextureComponent tc2 = (TextureComponent)enemies[i].components["texture"];
-                        tc2.setTexture("enemy2Texture");
+                        _enemies[i] = new BaseEnemy();
+                        var tc2 = (TextureComponent)_enemies[i].Components["texture"];
+                        tc2.SetTexture("enemy2Texture");
                         break;
                     case 2:
-                        enemies[i] = new BaseEnemy();
-                        TextureComponent tc3 = (TextureComponent)enemies[i].components["texture"];
-                        tc3.setTexture("enemy3Texture");
+                        _enemies[i] = new BaseEnemy();
+                        var tc3 = (TextureComponent)_enemies[i].Components["texture"];
+                        tc3.SetTexture("enemy3Texture");
                         break;
                     default:
-                        enemies[i] = new BaseEnemy();
-                        TextureComponent tc4 = (TextureComponent)enemies[i].components["texture"];
-                        tc4.setTexture("enemy1Texture");
+                        _enemies[i] = new BaseEnemy();
+                        var tc4 = (TextureComponent)_enemies[i].Components["texture"];
+                        tc4.SetTexture("enemy1Texture");
                         break;
                 }
             }
@@ -50,47 +47,43 @@ namespace SpaceInvaders
 
         public void Initialize()
         {
-            foreach (BaseEnemy e in enemies)
+            foreach (var e in _enemies)
             {
                 e.Initialize();
             }
         }
 
-        public void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
-            int entityID = 0;
-            foreach (BaseEnemy e in enemies)
+            var entityId = 0;
+            foreach (var e in _enemies)
             {
-                if (entityID == 0 || entityID == (maxEnemyWidth-1))
+                if (entityId == 0 || entityId == (MaxEnemyWidth-1))
                 {
-                    BoundaryComponent bc = (BoundaryComponent)e.components["boundary"];
-                    PositionComponent pc = (PositionComponent)e.components["position"];
-                    TextureComponent tc = (TextureComponent)e.components["texture"];
+                    var bc = (BoundaryComponent)e.Components["boundary"];
+                    var pc = (PositionComponent)e.Components["position"];
+                    var tc = (TextureComponent)e.Components["texture"];
                     // Change X direction when screen edge has been reached
-                    if (bc.getSafeBounds().Left == pc.entityPosition.X || bc.getSafeBounds().Right - tc.texture.Width == pc.entityPosition.X)
+                    if (bc.GetSafeBounds().Left == pc.EntityPosition.X || bc.GetSafeBounds().Right - tc.Texture.Width == pc.EntityPosition.X)
                     {
-                        foreach (BaseEnemy e2 in enemies)
+                        foreach (var pc2 in _enemies.Select(e2 => (PositionComponent)e2.Components["position"]))
                         {
-                            PositionComponent pc2 = (PositionComponent)e2.components["position"];
-                            pc2.entitySpeed.X = pc2.entitySpeed.X * -1;
+                            pc2.EntitySpeed.X = pc2.EntitySpeed.X * -1;
                         }
                     }
                 }
 
-                entityID++;
+                entityId++;
             }
 
-            foreach (BaseEnemy e in enemies)
+            foreach (var e in _enemies)
             {
-                KeyboardState ks = Keyboard.GetState(PlayerIndex.One);
+                var ks = Keyboard.GetState(PlayerIndex.One);
                 if (ks.IsKeyDown(Keys.R))
                 {
-                    foreach (BaseEnemy _e in enemies)
+                    foreach (var _e in _enemies.Where(_e => _e != null))
                     {
-                        if (_e != null)
-                        {
-                            _e.active = true;
-                        }
+                        _e.Active = true;
                     }
                 }
                 e.Update(gameTime);
@@ -99,27 +92,27 @@ namespace SpaceInvaders
 
         public void LoadContent()
         {
-            int entityID = 0;
-            foreach(BaseEnemy e in enemies) {
+            var entityId = 0;
+            foreach(var e in _enemies) {
                 // Calculate offset for enemy
-                OffsetComponent oc = (OffsetComponent)e.components["offset"];
-                oc.setOffset(75.0f * (float)(entityID % maxEnemyWidth), 10.0f + (entityID / maxEnemyWidth) * 50.0f);
-                entityID++;
+                var oc = (OffsetComponent)e.Components["offset"];
+                oc.SetOffset(75.0f * (entityId % MaxEnemyWidth), 10.0f + (entityId / MaxEnemyWidth) * 50.0f);
+                entityId++;
                 e.LoadContent();
             }
         }
 
-        public void Draw(Microsoft.Xna.Framework.GameTime gameTime)
+        public void Draw(GameTime gameTime)
         {
-            foreach (BaseEnemy e in enemies)
+            foreach (var e in _enemies)
             {
                 e.Draw(gameTime);
             }
         }
 
-        public BaseEnemy[] getEnemies()
+        public BaseEnemy[] GetEnemies()
         {
-            return enemies;
+            return _enemies;
         }
     }
 }

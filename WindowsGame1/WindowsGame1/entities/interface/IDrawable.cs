@@ -2,8 +2,8 @@
 
 namespace SpaceInvaders.entities.@interface
 {
-    public interface IUpdatable
+    public interface IDrawable
     {
-        void Update(GameTime gameTime);
+        void Draw(GameTime gameTime);
     }
 }

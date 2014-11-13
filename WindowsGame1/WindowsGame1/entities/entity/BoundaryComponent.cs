@@ -1,46 +1,42 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SpaceInvaders.world;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
     public class BoundaryComponent : AbstractComponent
     {
-        Entity baseEntity;
-        PositionComponent pos;
-        TextureComponent tex;
+        IEntity _baseEntity;
+        readonly PositionComponent _pos;
+        readonly TextureComponent _tex;
 
-        Rectangle safeBounds;
+        Rectangle _safeBounds;
 
-        public BoundaryComponent(Entity _base, PositionComponent _pos, TextureComponent _tex)
+        public BoundaryComponent(IEntity baseEntity, PositionComponent pos, TextureComponent tex)
         {
-            baseEntity = _base;
-            pos = _pos;
-            tex = _tex;
+            _baseEntity = baseEntity;
+            _pos = pos;
+            _tex = tex;
         }
         public override void LoadContent()
         {
         }
 
-        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime) { }
+        public override void Draw(GameTime gameTime) { }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime) {
-            Viewport viewport = Space.viewport;
-            safeBounds = new Rectangle(
+        public override void Update(GameTime gameTime) {
+            var viewport = Space.Viewport;
+            _safeBounds = new Rectangle(
                 (int)(viewport.Width * 0.0f),
                 (int)(viewport.Height * 0.0f),
                 (int)(viewport.Width * (1 - 2 * 0.0f)),
                 (int)(viewport.Height * (1 - 2 * 0.0f)));
 
-            pos.entityPosition.X = MathHelper.Clamp(pos.entityPosition.X, safeBounds.Left, safeBounds.Right - tex.texture.Width);
+            _pos.EntityPosition.X = MathHelper.Clamp(_pos.EntityPosition.X, _safeBounds.Left, _safeBounds.Right - _tex.Texture.Width);
         }
 
-        public Rectangle getSafeBounds()
+        public Rectangle GetSafeBounds()
         {
-            return safeBounds;
+            return _safeBounds;
         }
     }
 }

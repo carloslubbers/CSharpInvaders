@@ -1,68 +1,63 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using SpaceInvaders.entities.ammo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
     public class InputComponent : AbstractComponent
     {
-        private bool moving = false;
-        public float movementSpeed = 5.0f;
+        private bool _moving;
+        public float MovementSpeed = 5.0f;
 
-        Entity baseEntity;
-        PositionComponent pos;
-        FiringComponent fire;
+        IEntity _baseEntity;
+        readonly PositionComponent _pos;
+        readonly FiringComponent _fire;
 
-        public InputComponent(Entity _base, PositionComponent _pos, FiringComponent _fire)
+        public InputComponent(IEntity _base, PositionComponent pos, FiringComponent fire)
         {
-            baseEntity = _base;
-            pos = _pos;
-            fire = _fire;
+            _baseEntity = _base;
+            _pos = pos;
+            _fire = fire;
         }
         public override void LoadContent()
         {
         }
 
-        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
         }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            KeyboardState ks = Keyboard.GetState(PlayerIndex.One);
+            var ks = Keyboard.GetState(PlayerIndex.One);
             if (ks.IsKeyDown(Keys.Space))
             {
-                fire.Fire();
+                _fire.Fire();
             }
             if (ks.IsKeyDown(Keys.Left) && ks.IsKeyDown(Keys.Right))
             {
-                moving = false;
+                _moving = false;
             }
             else if (ks.IsKeyDown(Keys.Left))
             {
-                pos.entitySpeed.X = -1.0f * movementSpeed;
-                moving = true;
+                _pos.EntitySpeed.X = -1.0f * MovementSpeed;
+                _moving = true;
             }
             else if (ks.IsKeyDown(Keys.Right))
             {
-                pos.entitySpeed.X = movementSpeed;
-                moving = true;
+                _pos.EntitySpeed.X = MovementSpeed;
+                _moving = true;
             }
             else if (ks.IsKeyUp(Keys.Left))
             {
-                moving = false;
+                _moving = false;
             }
             else if (ks.IsKeyUp(Keys.Right))
             {
-                moving = false;
+                _moving = false;
             }
 
             // Stop moving if no keys are pressed
-            if (!moving) pos.entitySpeed.X = 0.0f;
+            if (!_moving) _pos.EntitySpeed.X = 0.0f;
         }
     }
 }

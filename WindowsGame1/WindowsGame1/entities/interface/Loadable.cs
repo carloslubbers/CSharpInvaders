@@ -1,12 +1,6 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SpaceInvaders
+﻿namespace SpaceInvaders.entities.@interface
 {
-    public interface Loadable
+    public interface ILoadable
     {
         void LoadContent();
     }

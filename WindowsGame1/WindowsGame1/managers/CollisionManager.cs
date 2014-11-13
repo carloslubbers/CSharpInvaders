@@ -1,52 +1,36 @@
-﻿using SpaceInvaders.entities;
-using SpaceInvaders.entities.ammo;
+﻿using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.@interface;
 using SpaceInvaders.world;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SpaceInvaders.managers
 {
-    class CollisionManager : Updatable
+    class CollisionManager : IUpdatable
     {
-        BulletManager bulletManager;
-        EnemyManager enemyManager;
+        readonly BulletManager _bulletManager;
+        readonly EnemyManager _enemyManager;
 
-        public CollisionManager(BulletManager _bulletManager, EnemyManager _enemyManager)
+        public CollisionManager(BulletManager bulletManager, EnemyManager enemyManager)
         {
-            bulletManager = _bulletManager;
-            enemyManager = _enemyManager;
+            _bulletManager = bulletManager;
+            _enemyManager = enemyManager;
         }
+
         public void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
-            Ammo[] bullets = bulletManager.getPlayerBullets();
-            BaseEnemy[] enemies = enemyManager.getEnemies();
+            var bullets = _bulletManager.GetPlayerBullets();
+            var enemies = _enemyManager.GetEnemies();
 
-            foreach (Ammo a in bullets)
+            foreach (var a in bullets)
             {
-                if (a != null)
+                if (a == null || !a.Active) continue;
+                var a1 = a;
+                foreach (var e in from e in enemies where e != null && e.Active let tc = (TextureComponent) e.Components["texture"] where a1.TextureComponent.Bounds.Intersects(tc.Bounds) select e)
                 {
-                    if (a.active)
-                    {
-                        foreach (BaseEnemy e in enemies)
-                        {
-                            if (e != null)
-                            {
-                                if (e.active)
-                                {
-                                    TextureComponent tc = (TextureComponent)e.components["texture"];
-                                    if (a.textureComponent.bounds.Intersects(tc.bounds))
-                                    {
-                                        a.active = false;
-                                        e.active = false;
+                    a.Active = false;
+                    e.Active = false;
 
-                                        Space.scoreManager.AddScore(1);
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    Space.ScoreManager.AddScore(1);
                 }
             }
         }

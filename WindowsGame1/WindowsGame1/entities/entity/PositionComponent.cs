@@ -1,29 +1,25 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
     public class PositionComponent : AbstractComponent
     {
-        public Vector2 entityPosition = new Vector2(0.0f, 0.0f);
-        public Vector2 entitySpeed = new Vector2(0.0f, 0.0f);
-        private Entity baseEntity;
+        private readonly IEntity _base;
+        public Vector2 EntityPosition = new Vector2(0.0f, 0.0f);
+        public Vector2 EntitySpeed = new Vector2(0.0f, 0.0f);
 
-        public PositionComponent(Entity _base)
+        public PositionComponent(IEntity _base)
         {
-            baseEntity = _base;
+            this._base = _base;
         }
 
         public override void LoadContent() { }
 
-        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime) { }
+        public override void Draw(GameTime gameTime) { }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            entityPosition += entitySpeed;
+            EntityPosition += EntitySpeed;
         }
     }
 }

@@ -1,34 +1,31 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
     public class OffsetComponent : AbstractComponent
     {
-        Entity baseEntity;
-        PositionComponent pos;
+        private readonly IEntity _baseEntity;
+        readonly PositionComponent _pos;
         
-        public Vector2 entityOffset;
+        public Vector2 EntityOffset;
 
-        public OffsetComponent(Entity _base, PositionComponent _pos)
+        public OffsetComponent(IEntity baseEntity, PositionComponent pos)
         {
-            baseEntity = _base;
-            pos = _pos;
+            _baseEntity = baseEntity;
+            _pos = pos;
         }
+
         public override void LoadContent() {}
 
-        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime) { }
+        public override void Draw(GameTime gameTime) { }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime) { }
+        public override void Update(GameTime gameTime) { }
 
-        public void setOffset(float x, float y)
+        public void SetOffset(float x, float y)
         {
-            entityOffset.X = x;
-            entityOffset.Y = y;
-            pos.entityPosition += entityOffset;
+            EntityOffset.X = x;
+            EntityOffset.Y = y;
+            _pos.EntityPosition += EntityOffset;
         }
     }
 }

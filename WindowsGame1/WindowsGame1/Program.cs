@@ -1,4 +1,4 @@
-using System;
+using SpaceInvaders.world;
 
 namespace SpaceInvaders
 {
@@ -6,9 +6,9 @@ namespace SpaceInvaders
     static class Program
     {
         /// The main entry point.
-        static void Main(string[] args)
+        static void Main()
         {
-            using (Space game = new Space())
+            using (var game = new Space())
             {
                 game.Run();
             }

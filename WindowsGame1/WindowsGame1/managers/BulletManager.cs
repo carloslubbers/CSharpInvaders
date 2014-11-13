@@ -1,89 +1,76 @@
-﻿using Microsoft.Xna.Framework;
-using SpaceInvaders.entities.ammo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Timers;
+using Microsoft.Xna.Framework;
+using SpaceInvaders.entities.ammo;
 
-namespace SpaceInvaders.world
+namespace SpaceInvaders.managers
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
     public class BulletManager
     {
-        Ammo[] playerBullets;
-        int playerBulletCount = 0;
-        Timer timer;
-        int timerDelay = 250;
-        static Boolean ready = true;
+        readonly Ammo[] _playerBullets;
+        int _playerBulletCount;
+        readonly Timer _timer;
+        int _timerDelay = 250;
+        static Boolean _ready = true;
 
         public BulletManager()
         {
-            playerBullets = new Ammo[100];
-            timer = new Timer();
-            timer.Elapsed += new ElapsedEventHandler(TimerFinished);
-            timer.Interval = timerDelay;
-            timer.Enabled = true;
+            _playerBullets = new Ammo[100];
+            _timer = new Timer();
+            _timer.Elapsed += TimerFinished;
+            _timer.Interval = _timerDelay;
+            _timer.Enabled = true;
         }
 
-        public void createPlayerBullet(Ammo _ammo, Vector2 p) {            
-            timer.Start();
+        public void FirePlayerBullet(Ammo ammo, Vector2 p) {            
+            _timer.Start();
 
-            if (ready)
-            {
-                timer.Stop();
+            if (!_ready) return;
+            _timer.Stop();
 
-                playerBullets[playerBulletCount % playerBullets.Length] = _ammo;
-                playerBullets[playerBulletCount % playerBullets.Length].Fire(p);
-                playerBulletCount++;
+            _playerBullets[_playerBulletCount % _playerBullets.Length] = ammo;
+            _playerBullets[_playerBulletCount % _playerBullets.Length].Fire(p);
+            _playerBulletCount++;
 
-                ready = false;
-                timer.Start();
-            }
+            _ready = false;
+            _timer.Start();
         }
 
         public void Update(GameTime gameTime)
         {
-            if (playerBulletCount > 0)
+            if (_playerBulletCount <= 0) return;
+            foreach (var t in _playerBullets.Where(t => t != null))
             {
-                for(int i = 0; i<playerBullets.Length;i++)
-                {
-                    if (playerBullets[i] != null)
-                    {
-                        playerBullets[i].Update(gameTime);
-                    }
-                }
+                t.Update(gameTime);
             }
         }
 
         public void Draw(GameTime gameTime)
         {
-            if (playerBulletCount > 0)
+            if (_playerBulletCount <= 0) return;
+            foreach (var t in _playerBullets.Where(t => t != null))
             {
-                for (int i = 0; i < playerBullets.Length; i++)
-                {
-                    if (playerBullets[i] != null)
-                    {
-                        playerBullets[i].Draw(gameTime);
-                    }
-                }
+                t.Draw(gameTime);
             }
         }
 
         private static void TimerFinished(object source, ElapsedEventArgs e)
         {
-            ready = true;
+            _ready = true;
         }
 
-        public Ammo[] getPlayerBullets()
+        public IEnumerable<Ammo> GetPlayerBullets()
         {
-            return playerBullets;
+            return _playerBullets;
         }
 
-        public void setDelay(int d)
+        public void SetDelay(int d)
         {
-            timerDelay = d;
-            timer.Interval = d;
+            _timerDelay = d;
+            _timer.Interval = d;
         }
     }
 }

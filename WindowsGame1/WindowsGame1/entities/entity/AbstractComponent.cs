@@ -1,12 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SpaceInvaders.entities.@interface;
+using IDrawable = SpaceInvaders.entities.@interface.IDrawable;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
-    public abstract class AbstractComponent : Updatable, Drawable, Loadable
+    public abstract class AbstractComponent : IUpdatable, IDrawable, ILoadable
     {
         public abstract void LoadContent();
         public abstract void Draw(GameTime gameTime);

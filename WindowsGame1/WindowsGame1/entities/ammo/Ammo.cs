@@ -1,53 +1,47 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SpaceInvaders.entities.entity;
 
 namespace SpaceInvaders.entities.ammo
 {
-    public class Ammo : Entity
+    public class Ammo : IEntity
     {
-        public PositionComponent positionComponent;
-        public TextureComponent textureComponent;
+        public PositionComponent PositionComponent;
+        public TextureComponent TextureComponent;
 
-        public bool active = false;
+        public bool Active = false;
         public Ammo()
         {
-            positionComponent = new PositionComponent(this);
-            textureComponent = new TextureComponent(this, positionComponent);
-            textureComponent.setTexture("ammoTexture");
-            positionComponent.entitySpeed.Y = -15.0f;
+            PositionComponent = new PositionComponent(this);
+            TextureComponent = new TextureComponent(this, PositionComponent);
+
+            TextureComponent.SetTexture("ammoTexture");
+            PositionComponent.EntitySpeed.Y = -15.0f;
         }
 
         public void Fire(Vector2 p) {
-            positionComponent.entityPosition = p;
-            positionComponent.entityPosition.X += 27.5f;
-            positionComponent.entityPosition.Y -= 30.0f;
-            active = true;
+            PositionComponent.EntityPosition = p;
+            PositionComponent.EntityPosition.X += 27.5f;
+            PositionComponent.EntityPosition.Y -= 30.0f;
+            Active = true;
         }
 
         public void Update(GameTime gameTime)
         {
-            if (active)
-            {
-                positionComponent.Update(gameTime);
-                textureComponent.Update(gameTime);
-            }
+            if (!Active) return;
+            PositionComponent.Update(gameTime);
+            TextureComponent.Update(gameTime);
         }
 
         public void LoadContent()
         {
-            textureComponent.LoadContent();
+            TextureComponent.LoadContent();
         }
 
         public void Draw(GameTime gameTime)
         {
-            if (active)
+            if (Active)
             {
-                textureComponent.Draw(gameTime);
+                TextureComponent.Draw(gameTime);
             }
         }
     }

@@ -1,37 +1,32 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using SpaceInvaders.world;
+using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.ship;
 using SpaceInvaders.managers;
 
-namespace SpaceInvaders
+namespace SpaceInvaders.world
 {
-    public class Space : Microsoft.Xna.Framework.Game
+    public class Space : Game
     {
-        public static  GraphicsDeviceManager graphics;
-        public static SpriteBatch spriteBatch;
-        public static ContentManager content;
-        public static Viewport viewport;
-        public static BulletManager bulletManager;
-        public static ScoreManager scoreManager;
-        BaseShip ship;
-        EnemyManager entityManager;
-        CollisionManager collisionManager;
+        private static  GraphicsDeviceManager _graphics;
+        public static SpriteBatch SpriteBatch;
+        public static ContentManager ContentManager;
+        public static Viewport Viewport;
+        public static BulletManager BulletManager;
+        public static ScoreManager ScoreManager;
+        BaseShip _ship;
+        EnemyManager _entityManager;
+        CollisionManager _collisionManager;
 
         public Space()
         {
-            graphics = new GraphicsDeviceManager(this);
-            content = Content;
-            graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferHeight = 920;
-            graphics.PreferredBackBufferWidth = 1800;
+            _graphics = new GraphicsDeviceManager(this);
+            ContentManager = Content;
+            _graphics.IsFullScreen = false;
+            _graphics.PreferredBackBufferHeight = 920;
+            _graphics.PreferredBackBufferWidth = 1800;
             Content.RootDirectory = "Content";
         }
 
@@ -40,45 +35,45 @@ namespace SpaceInvaders
         {
             base.Initialize();
 
-            ship.Initialize();
-            entityManager.Initialize();
+            _ship.Initialize();
+            _entityManager.Initialize();
         }
 
-        // Load all the game content
+        // Load all the game ContentManager
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            SpriteBatch = new SpriteBatch(GraphicsDevice);
 
-            ship = new BaseShip();
-            ship.LoadContent();
+            _ship = new BaseShip();
+            _ship.LoadContent();
 
-            entityManager = new EnemyManager(120);
-            entityManager.LoadContent();
+            _entityManager = new EnemyManager(120);
+            _entityManager.LoadContent();
 
-            bulletManager = new BulletManager();
+            BulletManager = new BulletManager();
 
-            collisionManager = new CollisionManager(bulletManager, entityManager);
+            _collisionManager = new CollisionManager(BulletManager, _entityManager);
 
-            scoreManager = new ScoreManager(ship);
+            ScoreManager = new ScoreManager(_ship);
         }
 
-        // Unload all the game content
+        // Unload all the game ContentManager
         protected override void UnloadContent() {}
 
         // Allows the game to run logic such as updating the world,
         // checking for collisions, gathering input, and playing audio.
         protected override void Update(GameTime gameTime)
         {
-            viewport = GraphicsDevice.Viewport;
+            Viewport = GraphicsDevice.Viewport;
             // Allows the game to exit
             if(Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape)) 
-                this.Exit();
+                Exit();
 
             // Update game elements
-            ship.Update(gameTime);
-            entityManager.Update(gameTime);
-            bulletManager.Update(gameTime);
-            collisionManager.Update(gameTime);
+            _ship.Update(gameTime);
+            _entityManager.Update(gameTime);
+            BulletManager.Update(gameTime);
+            _collisionManager.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -89,15 +84,21 @@ namespace SpaceInvaders
             GraphicsDevice.Clear(Color.Black);
 
             // TODO: Manage the UI somewhere else
-            spriteBatch.Begin();
-            spriteBatch.DrawString(Content.Load<SpriteFont>("Segoe UI Mono"), "Score: " + scoreManager.score, new Vector2(graphics.GraphicsDevice.Viewport.Width / 2,
-        graphics.GraphicsDevice.Viewport.Height / 2), Color.White, 0, Content.Load<SpriteFont>("Segoe UI Mono").MeasureString("Score: " + scoreManager.score) / 2, 1.0f, SpriteEffects.None, 0.5f);
-            spriteBatch.End();
+            SpriteBatch.Begin();
+            var x = _graphics.GraphicsDevice.Viewport.Width/2;
+            var y = _graphics.GraphicsDevice.Viewport.Height/2;
+                // Draw score
+                SpriteBatch.DrawString(Content.Load<SpriteFont>("Segoe UI Mono"), "Score: " + ScoreManager.Score, new Vector2(x,y), Color.White, 0, Content.Load<SpriteFont>("Segoe UI Mono").MeasureString("Score: " + ScoreManager.Score) / 2, 1.0f, SpriteEffects.None, 0.5f);
+            
+                // Draw health
+                var hc = (HealthComponent) _ship.Components["health"];
+                SpriteBatch.DrawString(Content.Load<SpriteFont>("Segoe UI Mono"), "Health: " + hc.Health, new Vector2(x,y + 20), Color.White, 0, Content.Load<SpriteFont>("Segoe UI Mono").MeasureString("Health: " + hc.Health) / 2, 1.0f, SpriteEffects.None, 0.5f);
+            SpriteBatch.End();
 
             // Update game elements
-            ship.Draw(gameTime);
-            entityManager.Draw(gameTime);
-            bulletManager.Draw(gameTime);
+            _ship.Draw(gameTime);
+            _entityManager.Draw(gameTime);
+            BulletManager.Draw(gameTime);
             base.Draw(gameTime);
         }
     }

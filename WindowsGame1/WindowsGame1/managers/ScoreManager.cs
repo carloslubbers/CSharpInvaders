@@ -1,42 +1,40 @@
-﻿using SpaceInvaders.entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
+using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.ship;
 
 namespace SpaceInvaders.managers
 {
     public class ScoreManager
     {
 
-        public int score = 0;
-        private BaseShip player;
+        public int Score;
+        private readonly BaseShip _player;
 
-        public ScoreManager(BaseShip _player)
+        public ScoreManager(BaseShip player)
         {
-            player = _player;
+            _player = player;
         }
 
         public void AddScore(int points) {
-            score += points;
+            Score += points;
 
-            pointScored();
+            PointScored();
         }
 
-        private void pointScored() {
-            TextureComponent tc = (TextureComponent)player.components["texture"];
-            InputComponent ic = (InputComponent) player.components["input"];
-            FiringComponent fc = (FiringComponent) player.components["firing"];
+        private void PointScored() {
+            var tc = (TextureComponent)_player.Components["texture"];
+            var ic = (InputComponent) _player.Components["input"];
+            var fc = (FiringComponent) _player.Components["firing"];
 
-            Console.WriteLine("Points: " + score);
-            switch (score)
+            Console.WriteLine("Points: " + Score);
+            switch (Score)
             {
-                case 5:
-                    tc.setTexture("blueshipTexture");
-                    ic.movementSpeed = 10.0f;
-                    break;
                 case 10:
-                    fc.setDelay(200);
+                    tc.SetTexture("blueshipTexture");
+                    ic.MovementSpeed = 10.0f;
+                    break;
+                case 20:
+                    fc.SetDelay(150);
                     break;
             }
         }

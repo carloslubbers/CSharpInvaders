@@ -22,7 +22,7 @@
         <referencesInternal>
           <reference
             Id="50892abb-5a71-4d77-9a47-3c64e2bfd8ea"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.behaviour Type%3DSequence"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDesktop%2FCSharpInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.behaviour Type%3DSequence"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -70,7 +70,7 @@
         </appliedStereotypesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="fcdf809a-54fa-429f-b206-a84962186951"
+            Id="943601c4-af81-41fc-a161-204b6cf83c01"
             name="Sequence"
             isLeaf="false"
             isStatic="false"
@@ -79,54 +79,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="cf07305e-0eb5-4cd7-839f-f8b24dd22f82"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.behaviour Type%3DSequence Member%3D.ctor"
+                Id="4063b055-b907-4212-8631-48157b424ff3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDesktop%2FCSharpInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.behaviour Type%3DSequence Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="4b4026e0-1876-434a-a259-a44fbbb41cc8"
+                Id="a8784459-536f-45e8-86a1-d06b67774721"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5e74d914-40ff-4d7d-b665-c4d7cff234bf">
+                    Id="0971d790-d80e-48a7-9e48-af0ff8f58f41">
                     <propertyInstance
-                      Id="40162fd4-4288-4715-9d7e-b74fb8fdb4d0"
+                      Id="527e8533-78fd-4410-858b-f86026ffb353"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="28c56a78-9662-4b81-8520-043666ef0b33">
+                    Id="4da2bbef-f15e-43e5-acdb-5f1161ea5498">
                     <propertyInstance
-                      Id="85348862-c0c9-404e-af2c-9a3347433f00"
+                      Id="32a41225-ba36-4072-9ae9-39700cf3c81f"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="019b8fc3-b5b3-4b9a-9830-26f40d34b7fe">
+                    Id="d1862e31-dbe2-4585-9db4-5f4baf741799">
                     <propertyInstance
-                      Id="d449a124-be5f-4768-b34d-7d10f85c0a09"
+                      Id="b3cdfe85-7d7d-4ac8-a820-16f45af675e4"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4a68add3-b757-4360-a417-c7e5fb9a65b1">
+                    Id="389c2778-236d-4e64-9ccc-04fb16c3edca">
                     <propertyInstance
-                      Id="20b4f156-953d-4054-9cf6-347c1d60534c"
+                      Id="31e1f6d0-8582-4d9f-b772-82b0bce93ac6"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="224f90e1-4faa-42da-a1c4-11fe1120bbe6">
+                    Id="e99b7a24-5c81-47ae-8e15-cbad828a46cc">
                     <propertyInstance
-                      Id="75ee5ea8-00a4-47f2-8149-6466d48fbb05"
+                      Id="a62c95d4-a965-4a25-96cc-0c6348329b23"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="90202c50-18f7-4274-8c15-6bc1b03250c2">
+                    Id="03e04d54-4402-4ae9-87f1-77676247b7aa">
                     <propertyInstance
-                      Id="7bd7c8fe-36ef-4885-a91c-4fa94b2bb593"
+                      Id="a3eb766e-c509-4556-b4dc-241360ed78a2"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

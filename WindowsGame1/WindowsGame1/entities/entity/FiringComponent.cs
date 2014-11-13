@@ -1,36 +1,34 @@
-﻿using SpaceInvaders.entities.ammo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
+using SpaceInvaders.entities.ammo;
+using SpaceInvaders.world;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
     public class FiringComponent : AbstractComponent
     {
-        public String ammoType = "default";
-        PositionComponent pos;
+        public String AmmoType = "default";
+        readonly PositionComponent _pos;
 
-        public FiringComponent(Entity _base, PositionComponent _pos)
+        public FiringComponent(IEntity _base, PositionComponent pos)
         {
-            pos = _pos;
+            _pos = pos;
         }
 
         public void Fire()
         {
             Ammo ammo;
 
-            switch (ammoType)
+            switch (AmmoType)
             {
                 default:
                     ammo = new Ammo();
                     break;
             }
-            Space.bulletManager.createPlayerBullet(new Ammo(), pos.entityPosition);
+            Space.BulletManager.FirePlayerBullet(ammo, _pos.EntityPosition);
         }
 
-        public void setDelay(int d) {
-            Space.bulletManager.setDelay(d);
+        public void SetDelay(int d) {
+            Space.BulletManager.SetDelay(d);
         }
 
         public override void LoadContent() { }

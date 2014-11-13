@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SpaceInvaders.entities.@interface;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
-    public interface Entity : Updatable, Loadable, Drawable
+    public interface IEntity : IUpdatable, ILoadable, IDrawable
     {
 
     }

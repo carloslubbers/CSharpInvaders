@@ -1,43 +1,38 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceInvaders.entities;
-using SpaceInvaders.entities.ammo;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Microsoft.Xna.Framework;
+using SpaceInvaders.entities.entity;
 
-namespace SpaceInvaders
+namespace SpaceInvaders.entities.enemy
 {
-    class BaseEnemy : Entity
+    class BaseEnemy : IEntity
     {
-        public Dictionary<String, AbstractComponent> components;
-        public bool active = true;
+        public Dictionary<String, AbstractComponent> Components;
+        public bool Active = true;
 
         public BaseEnemy()
         {
-            components = new Dictionary<string, AbstractComponent>();
-            PositionComponent positionComponent = new PositionComponent(this);
-            TextureComponent textureComponent = new TextureComponent(this, positionComponent);
-            OffsetComponent offsetComponent = new OffsetComponent(this, positionComponent);
-            BoundaryComponent boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
+            Components = new Dictionary<string, AbstractComponent>();
+            var positionComponent = new PositionComponent(this);
+            var textureComponent = new TextureComponent(this, positionComponent);
+            var offsetComponent = new OffsetComponent(this, positionComponent);
+            var boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
 
-            components.Add("position", positionComponent);
-            components.Add("texture",  textureComponent);
-            components.Add("offset", offsetComponent);
-            components.Add("boundary", boundaryComponent);
+            Components.Add("position", positionComponent);
+            Components.Add("texture",  textureComponent);
+            Components.Add("offset", offsetComponent);
+            Components.Add("boundary", boundaryComponent);
         }
 
         public void Initialize()
         {
-            PositionComponent pc = (PositionComponent) components["position"];
-            pc.entitySpeed.X = 3.0f;
+            var pc = (PositionComponent) Components["position"];
+            pc.EntitySpeed.X = 3.0f;
         }
         
         public void LoadContent()
         {
-            foreach (KeyValuePair<string, AbstractComponent> ac in components)
+            foreach (var ac in Components)
             {
                 ac.Value.LoadContent();
             }
@@ -45,7 +40,7 @@ namespace SpaceInvaders
 
         public void Update(GameTime gameTime)
         {
-            foreach (KeyValuePair<string, AbstractComponent> ac in components)
+            foreach (var ac in Components)
             {
                 ac.Value.Update(gameTime);
             }
@@ -53,12 +48,10 @@ namespace SpaceInvaders
 
         public void Draw(GameTime gameTime)
         {
-            if (active)
+            if (!Active) return;
+            foreach (var ac in Components)
             {
-                foreach (KeyValuePair<string, AbstractComponent> ac in components)
-                {
-                    ac.Value.Draw(gameTime);
-                }
+                ac.Value.Draw(gameTime);
             }
         }
     }

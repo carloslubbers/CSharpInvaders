@@ -1,57 +1,54 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework.Input;
-using SpaceInvaders.entities.ammo;
-using SpaceInvaders.entities;
+using Microsoft.Xna.Framework;
+using SpaceInvaders.entities.entity;
+using SpaceInvaders.world;
 
-namespace SpaceInvaders
+namespace SpaceInvaders.entities.ship
 {
-    public class BaseShip : Entity
+    public class BaseShip : IEntity
     {
-        public Dictionary<String, AbstractComponent> components;
+        public readonly Dictionary<String, AbstractComponent> Components;
 
         public BaseShip()
         {
-            components = new Dictionary<string, AbstractComponent>();
-            PositionComponent positionComponent = new PositionComponent(this);
-            TextureComponent textureComponent = new TextureComponent(this, positionComponent);
-            OffsetComponent offsetComponent = new OffsetComponent(this, positionComponent);
-            BoundaryComponent boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
-            FiringComponent firingComponent = new FiringComponent(this, positionComponent);
-            InputComponent inputComponent = new InputComponent(this, positionComponent, firingComponent);
+            Components = new Dictionary<string, AbstractComponent>();
+            var positionComponent = new PositionComponent(this);
+            var textureComponent = new TextureComponent(this, positionComponent);
+            var offsetComponent = new OffsetComponent(this, positionComponent);
+            var boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
+            var firingComponent = new FiringComponent(this, positionComponent);
+            var inputComponent = new InputComponent(this, positionComponent, firingComponent);
+            var healthComponent = new HealthComponent(); // 100 Health
 
-            components.Add("position", positionComponent);
-            components.Add("texture", textureComponent);
-            components.Add("offset", offsetComponent);
-            components.Add("boundary", boundaryComponent);
-            components.Add("firing", firingComponent);
-            components.Add("input", inputComponent);
+            Components.Add("position", positionComponent);
+            Components.Add("texture", textureComponent);
+            Components.Add("offset", offsetComponent);
+            Components.Add("boundary", boundaryComponent);
+            Components.Add("firing", firingComponent);
+            Components.Add("input", inputComponent);
+            Components.Add("health", healthComponent);
         }
 
         public void Initialize()
         {
-            TextureComponent tc = (TextureComponent) components["texture"];
-            tc.setTexture("shipTexture");
+            var tc = (TextureComponent) Components["texture"];
+            tc.SetTexture("shipTexture");
         }
         
         public void LoadContent()
         {
-            foreach(KeyValuePair<string, AbstractComponent> kv in components) {
+            foreach(var kv in Components) {
                 kv.Value.LoadContent();
             }
         }
 
         public void Update(GameTime gameTime)
         {
-            PositionComponent pc = (PositionComponent) components["position"];
-            TextureComponent tc = (TextureComponent)components["texture"];
-            pc.entityPosition.Y = Space.viewport.Height-tc.texture.Height;
-            foreach (KeyValuePair<string, AbstractComponent> kv in components)
+            var pc = (PositionComponent) Components["position"];
+            var tc = (TextureComponent)Components["texture"];
+            pc.EntityPosition.Y = Space.Viewport.Height-tc.Texture.Height;
+            foreach (var kv in Components)
             {
                 kv.Value.Update(gameTime);
             }
@@ -59,7 +56,7 @@ namespace SpaceInvaders
 
         public void Draw(GameTime gameTime)
         {
-            foreach (KeyValuePair<string, AbstractComponent> kv in components)
+            foreach (var kv in Components)
             {
                 kv.Value.Draw(gameTime);
             }

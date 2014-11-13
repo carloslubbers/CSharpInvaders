@@ -74,14 +74,15 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="behaviour\Sequence.cs" />
     <Compile Include="entities\ammo\Ammo.cs" />
+    <Compile Include="entities\ammo\EnemyAmmo.cs" />
     <Compile Include="entities\enemy\BaseEnemy.cs" />
     <Compile Include="entities\entity\BoundaryComponent.cs" />
+    <Compile Include="entities\entity\HealthComponent.cs" />
     <Compile Include="entities\entity\OffsetComponent.cs" />
     <Compile Include="entities\entity\IEntity.cs" />
     <Compile Include="entities\interface\Loadable.cs" />
-    <Compile Include="entities\interface\Drawable.cs" />
+    <Compile Include="entities\interface\IDrawable.cs" />
     <Compile Include="entities\interface\Updatable.cs" />
     <Compile Include="entities\entity\FiringComponent.cs" />
     <Compile Include="entities\entity\InputComponent.cs" />

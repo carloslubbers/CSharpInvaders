@@ -1,50 +1,48 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SpaceInvaders.world;
 
-namespace SpaceInvaders.entities
+namespace SpaceInvaders.entities.entity
 {
     public class TextureComponent : AbstractComponent
     {
-        private string textureName;
+        private string _textureName;
 
-        public Texture2D texture;
-        public Rectangle bounds;
+        public Texture2D Texture;
+        public Rectangle Bounds;
 
-        Entity baseEntity;
-        PositionComponent pos;
+        IEntity _baseEntity;
+        readonly PositionComponent _pos;
 
-        public TextureComponent(Entity _base, PositionComponent _pos)
+        public TextureComponent(IEntity _base, PositionComponent pos)
         {
-            baseEntity = _base;
-            pos = _pos;
-            textureName = "default";
+            _baseEntity = _base;
+            _pos = pos;
+            _textureName = "default";
         }
 
         public override void LoadContent()
         {
-            texture = Space.content.Load<Texture2D>(textureName);
+            Texture = Space.ContentManager.Load<Texture2D>(_textureName);
         }
 
-        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
-            Space.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            Space.spriteBatch.Draw(texture, pos.entityPosition, Color.White);
-            Space.spriteBatch.End();
+            Space.SpriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            Space.SpriteBatch.Draw(Texture, _pos.EntityPosition, Color.White);
+            Space.SpriteBatch.End();
         }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            bounds = new Rectangle((int)(pos.entityPosition.X - texture.Width / 2), (int)(pos.entityPosition.Y - texture.Height / 2), texture.Width, texture.Height);
+            Bounds = new Rectangle((int)(_pos.EntityPosition.X - Texture.Width / 2), (int)(_pos.EntityPosition.Y - Texture.Height / 2), Texture.Width, Texture.Height);
         }
 
-        public void setTexture(String _name)
+        public void SetTexture(String name)
         {
-            textureName = _name;
-            texture = Space.content.Load<Texture2D>(textureName);
+            _textureName = name;
+            Texture = Space.ContentManager.Load<Texture2D>(_textureName);
         }
     }
 }
