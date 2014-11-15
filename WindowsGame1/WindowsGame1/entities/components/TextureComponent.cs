@@ -1,9 +1,10 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceInvaders.entities.components;
 using SpaceInvaders.world;
 
-namespace SpaceInvaders.entities.entity
+namespace SpaceInvaders.entities.components
 {
     public class TextureComponent : AbstractComponent
     {

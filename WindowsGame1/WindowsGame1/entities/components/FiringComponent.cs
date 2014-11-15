@@ -1,12 +1,13 @@
 ﻿using System;
 using SpaceInvaders.entities.ammo;
+using SpaceInvaders.entities.components;
 using SpaceInvaders.world;
 
-namespace SpaceInvaders.entities.entity
+namespace SpaceInvaders.entities.components
 {
     public class FiringComponent : AbstractComponent
     {
-        public String AmmoType = "default";
+        private String AmmoType = "default";
         readonly PositionComponent _pos;
 
         public FiringComponent(IEntity _base, PositionComponent pos)

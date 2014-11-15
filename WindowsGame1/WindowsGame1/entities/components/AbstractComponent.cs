@@ -2,7 +2,7 @@
 using SpaceInvaders.entities.@interface;
 using IDrawable = SpaceInvaders.entities.@interface.IDrawable;
 
-namespace SpaceInvaders.entities.entity
+namespace SpaceInvaders.entities.components
 {
     public abstract class AbstractComponent : IUpdatable, IDrawable, ILoadable
     {

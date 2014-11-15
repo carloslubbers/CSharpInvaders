@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.components;
+using SpaceInvaders.entities.components;
 
 namespace SpaceInvaders.entities.enemy
 {

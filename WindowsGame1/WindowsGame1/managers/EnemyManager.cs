@@ -2,8 +2,9 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvaders.entities.enemy;
-using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.components;
 using SpaceInvaders.entities.@interface;
+using SpaceInvaders.world;
 using IDrawable = SpaceInvaders.entities.@interface.IDrawable;
 
 namespace SpaceInvaders.managers
@@ -68,6 +69,10 @@ namespace SpaceInvaders.managers
                     {
                         foreach (var pc2 in _enemies.Select(e2 => (PositionComponent)e2.Components["position"]))
                         {
+                            if (pc2.EntityPosition.Y < Space.Viewport.Height)
+                            {
+                                pc2.EntityPosition.Y +=100.0f;
+                            }
                             pc2.EntitySpeed.X = pc2.EntitySpeed.X * -1;
                         }
                     }
@@ -96,7 +101,7 @@ namespace SpaceInvaders.managers
             foreach(var e in _enemies) {
                 // Calculate offset for enemy
                 var oc = (OffsetComponent)e.Components["offset"];
-                oc.SetOffset(75.0f * (entityId % MaxEnemyWidth), 10.0f + (entityId / MaxEnemyWidth) * 50.0f);
+                oc.SetOffset(75.0f * (entityId % MaxEnemyWidth)+ 50.0f, 10.0f + (entityId / MaxEnemyWidth) * 50.0f);
                 entityId++;
                 e.LoadContent();
             }

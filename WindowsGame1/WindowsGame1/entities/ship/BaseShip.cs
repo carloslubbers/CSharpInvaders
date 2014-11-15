@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.components;
+using SpaceInvaders.entities.components;
 using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.ship
@@ -18,7 +19,7 @@ namespace SpaceInvaders.entities.ship
             var offsetComponent = new OffsetComponent(this, positionComponent);
             var boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
             var firingComponent = new FiringComponent(this, positionComponent);
-            var inputComponent = new InputComponent(this, positionComponent, firingComponent);
+            var inputComponent = new KeyboardInputComponent(this, positionComponent, firingComponent);
             var healthComponent = new HealthComponent(); // 100 Health
 
             Components.Add("position", positionComponent);

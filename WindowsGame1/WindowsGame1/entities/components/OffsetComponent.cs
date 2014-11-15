@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
+using SpaceInvaders.entities.components;
 
-namespace SpaceInvaders.entities.entity
+namespace SpaceInvaders.entities.components
 {
     public class OffsetComponent : AbstractComponent
     {

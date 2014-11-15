@@ -1,14 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
-using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.components;
 
 namespace SpaceInvaders.entities.ammo
 {
     public class Ammo : IEntity
     {
-        public PositionComponent PositionComponent;
-        public TextureComponent TextureComponent;
+        protected readonly PositionComponent PositionComponent;
+        public readonly TextureComponent TextureComponent;
 
-        public bool Active = false;
+        public bool Active;
         public Ammo()
         {
             PositionComponent = new PositionComponent(this);

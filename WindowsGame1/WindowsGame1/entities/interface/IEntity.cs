@@ -1,6 +1,6 @@
 ﻿using SpaceInvaders.entities.@interface;
 
-namespace SpaceInvaders.entities.entity
+namespace SpaceInvaders.entities.components
 {
     public interface IEntity : IUpdatable, ILoadable, IDrawable
     {

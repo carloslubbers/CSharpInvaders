@@ -5304,5 +5304,29 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="071a629b-e814-455c-8ef9-fc16d374943a"
+        LastKnownName="components"
+        LastKnownLocation="Package_1911.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1f8f3ecc-620c-4008-a6fe-10d441fd0282"
+        LastKnownName="interface"
+        LastKnownLocation="Package1_1911.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="72112460-894f-4e90-b57a-1cdf3ec1a43c"
+        LastKnownName="enemy"
+        LastKnownLocation="Package2_1911.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3ab02b6e-5075-4367-9e29-2da3ab6144ac"
+        LastKnownName="ship"
+        LastKnownLocation="Package3_1911.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

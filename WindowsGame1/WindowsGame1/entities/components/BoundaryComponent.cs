@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using SpaceInvaders.world;
 
-namespace SpaceInvaders.entities.entity
+namespace SpaceInvaders.entities.components
 {
     public class BoundaryComponent : AbstractComponent
     {

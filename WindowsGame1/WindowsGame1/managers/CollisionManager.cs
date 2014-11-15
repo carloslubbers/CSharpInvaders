@@ -1,4 +1,4 @@
-﻿using SpaceInvaders.entities.entity;
+﻿using SpaceInvaders.entities.components;
 using SpaceInvaders.entities.@interface;
 using SpaceInvaders.world;
 using System.Linq;

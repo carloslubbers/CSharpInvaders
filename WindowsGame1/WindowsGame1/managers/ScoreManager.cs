@@ -1,5 +1,5 @@
 ﻿using System;
-using SpaceInvaders.entities.entity;
+using SpaceInvaders.entities.components;
 using SpaceInvaders.entities.ship;
 
 namespace SpaceInvaders.managers
@@ -23,7 +23,7 @@ namespace SpaceInvaders.managers
 
         private void PointScored() {
             var tc = (TextureComponent)_player.Components["texture"];
-            var ic = (InputComponent) _player.Components["input"];
+            var ic = (KeyboardInputComponent) _player.Components["input"];
             var fc = (FiringComponent) _player.Components["firing"];
 
             Console.WriteLine("Points: " + Score);
