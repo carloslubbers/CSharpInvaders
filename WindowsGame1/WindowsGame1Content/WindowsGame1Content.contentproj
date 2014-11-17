@@ -79,8 +79,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Segoe UI Mono.spritefont">
-      <Name>Segoe UI Mono</Name>
+    <Compile Include="GUIFont.spritefont">
+      <Name>GUIFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>

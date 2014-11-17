@@ -71,7 +71,7 @@ namespace SpaceInvaders.managers
                         {
                             if (pc2.EntityPosition.Y < Space.Viewport.Height)
                             {
-                                pc2.EntityPosition.Y +=100.0f;
+                                pc2.EntityPosition.Y +=20.0f;
                             }
                             pc2.EntitySpeed.X = pc2.EntitySpeed.X * -1;
                         }

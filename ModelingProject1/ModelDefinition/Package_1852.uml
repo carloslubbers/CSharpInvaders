@@ -6581,5 +6581,11 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d6a171f9-9620-45d6-b394-8e57aa30f499"
+        LastKnownName="gui"
+        LastKnownLocation="Package_1238.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>
