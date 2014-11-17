@@ -29,7 +29,7 @@ namespace SpaceInvaders.managers
                 {
                     a.Active = false;
                     e.Active = false;
-
+                    Space.SoundManager.Play("invaderkilled", 0.01f);
                     Space.ScoreManager.AddScore(1);
                 }
             }

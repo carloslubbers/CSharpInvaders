@@ -7,7 +7,7 @@ using SpaceInvaders.world;
 
 namespace SpaceInvaders.gui
 {
-    class SpaceGui : entities.@interface.IDrawable
+    public class SpaceGui : entities.@interface.IDrawable
     {
         private readonly SpriteBatch _sb;
         private readonly ContentManager _content;

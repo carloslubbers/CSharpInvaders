@@ -92,6 +92,7 @@
     <Compile Include="entities\ship\BaseShip.cs" />
     <Compile Include="entities\components\TextureComponent.cs" />
     <Compile Include="gui\SpaceGui.cs" />
+    <Compile Include="managers\SoundManager.cs" />
     <Compile Include="managers\CollisionManager.cs" />
     <Compile Include="managers\ScoreManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

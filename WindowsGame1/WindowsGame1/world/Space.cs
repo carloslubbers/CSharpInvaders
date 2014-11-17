@@ -15,6 +15,7 @@ namespace SpaceInvaders.world
         public static Viewport Viewport;
         public static BulletManager BulletManager;
         public static ScoreManager ScoreManager;
+        public static SoundManager SoundManager;
         BaseShip _ship;
         EnemyManager _entityManager;
         CollisionManager _collisionManager;
@@ -57,6 +58,10 @@ namespace SpaceInvaders.world
             _collisionManager = new CollisionManager(BulletManager, _entityManager);
 
             ScoreManager = new ScoreManager(_ship);
+
+            SoundManager = new SoundManager();
+            SoundManager.LoadContent();
+            SoundManager.PlayLooped("theme");
         }
 
         // Unload all the game ContentManager
