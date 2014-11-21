@@ -23,7 +23,7 @@ namespace SpaceInvaders.managers
 
         private void PointScored() {
             var tc = (TextureComponent)_player.Components["texture"];
-            var ic = (KeyboardInputComponent) _player.Components["input"];
+            var ic = (AbstractInputComponent) _player.Components["input"];
             var fc = (FiringComponent) _player.Components["firing"];
 
             Console.WriteLine("Points: " + Score);

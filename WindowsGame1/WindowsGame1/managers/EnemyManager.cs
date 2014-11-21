@@ -3,41 +3,43 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvaders.entities.enemy;
 using SpaceInvaders.entities.components;
-using SpaceInvaders.entities.@interface;
+using SpaceInvaders.entities.interfaces;
 using SpaceInvaders.world;
-using IDrawable = SpaceInvaders.entities.@interface.IDrawable;
+using IDrawable = SpaceInvaders.entities.interfaces.IDrawable;
 
 namespace SpaceInvaders.managers
 {
-    class EnemyManager : IDrawable, IUpdatable, ILoadable
+    public class EnemyManager : IDrawable, IUpdatable, ILoadable
     {
+        private readonly Space _space;
         readonly BaseEnemy[] _enemies;
         const int MaxEnemyWidth = 15;
 
-        public EnemyManager(int amount)
+        public EnemyManager(Space space, int amount)
         {
+            _space = space;
             _enemies = new BaseEnemy[amount];
             for (var i = 0; i < _enemies.Length; i++)
             {
                 switch (i / MaxEnemyWidth)
                 {
                     case 0:
-                        _enemies[i] = new BaseEnemy();
+                        _enemies[i] = new BaseEnemy(space);
                         var tc1 = (TextureComponent)_enemies[i].Components["texture"];
                         tc1.SetTexture("enemy1Texture");
                         break;
                     case 1:
-                        _enemies[i] = new BaseEnemy();
+                        _enemies[i] = new BaseEnemy(space);
                         var tc2 = (TextureComponent)_enemies[i].Components["texture"];
                         tc2.SetTexture("enemy2Texture");
                         break;
                     case 2:
-                        _enemies[i] = new BaseEnemy();
+                        _enemies[i] = new BaseEnemy(space);
                         var tc3 = (TextureComponent)_enemies[i].Components["texture"];
                         tc3.SetTexture("enemy3Texture");
                         break;
                     default:
-                        _enemies[i] = new BaseEnemy();
+                        _enemies[i] = new BaseEnemy(space);
                         var tc4 = (TextureComponent)_enemies[i].Components["texture"];
                         tc4.SetTexture("enemy1Texture");
                         break;
@@ -69,7 +71,7 @@ namespace SpaceInvaders.managers
                     {
                         foreach (var pc2 in _enemies.Select(e2 => (PositionComponent)e2.Components["position"]))
                         {
-                            if (pc2.EntityPosition.Y < Space.Viewport.Height)
+                            if (pc2.EntityPosition.Y < _space.Viewport.Height)
                             {
                                 pc2.EntityPosition.Y +=100.0f;
                             }
@@ -83,14 +85,6 @@ namespace SpaceInvaders.managers
 
             foreach (var e in _enemies)
             {
-                var ks = Keyboard.GetState(PlayerIndex.One);
-                if (ks.IsKeyDown(Keys.R))
-                {
-                    foreach (var _e in _enemies.Where(_e => _e != null))
-                    {
-                        _e.Active = true;
-                    }
-                }
                 e.Update(gameTime);
             }
         }
@@ -115,9 +109,18 @@ namespace SpaceInvaders.managers
             }
         }
 
+        public void ResetEnemies()
+        {
+            foreach (var e in _enemies.Where(e => e != null))
+            {
+                e.Active = true;
+            }
+        }
+
         public BaseEnemy[] GetEnemies()
         {
             return _enemies;
         }
+
     }
 }

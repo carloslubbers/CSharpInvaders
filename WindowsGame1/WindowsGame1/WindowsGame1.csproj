@@ -82,10 +82,10 @@
     <Compile Include="entities\components\BoundaryComponent.cs" />
     <Compile Include="entities\components\HealthComponent.cs" />
     <Compile Include="entities\components\OffsetComponent.cs" />
-    <Compile Include="entities\interface\IEntity.cs" />
-    <Compile Include="entities\interface\ILoadable.cs" />
-    <Compile Include="entities\interface\IDrawable.cs" />
-    <Compile Include="entities\interface\IUpdatable.cs" />
+    <Compile Include="entities\interfaces\IDrawable.cs" />
+    <Compile Include="entities\interfaces\IEntity.cs" />
+    <Compile Include="entities\interfaces\ILoadable.cs" />
+    <Compile Include="entities\interfaces\IUpdatable.cs" />
     <Compile Include="entities\components\FiringComponent.cs" />
     <Compile Include="entities\components\KeyboardInputComponent.cs" />
     <Compile Include="entities\components\PositionComponent.cs" />

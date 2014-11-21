@@ -1,4 +1,4 @@
-﻿namespace SpaceInvaders.entities.@interface
+﻿namespace SpaceInvaders.entities.interfaces
 {
     public interface ILoadable
     {

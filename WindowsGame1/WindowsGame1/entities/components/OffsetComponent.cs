@@ -1,16 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
-using SpaceInvaders.entities.components;
+using SpaceInvaders.entities.interfaces;
 
 namespace SpaceInvaders.entities.components
 {
     public class OffsetComponent : AbstractComponent
     {
-        private readonly IEntity _baseEntity;
+        private readonly Entity _baseEntity;
         readonly PositionComponent _pos;
-        
-        public Vector2 EntityOffset;
 
-        public OffsetComponent(IEntity baseEntity, PositionComponent pos)
+        private Vector2 _entityOffset;
+
+        public OffsetComponent(Entity baseEntity, PositionComponent pos)
         {
             _baseEntity = baseEntity;
             _pos = pos;
@@ -24,9 +24,9 @@ namespace SpaceInvaders.entities.components
 
         public void SetOffset(float x, float y)
         {
-            EntityOffset.X = x;
-            EntityOffset.Y = y;
-            _pos.EntityPosition += EntityOffset;
+            _entityOffset.X = x;
+            _entityOffset.Y = y;
+            _pos.EntityPosition += _entityOffset;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using SpaceInvaders.entities.@interface;
-using IDrawable = SpaceInvaders.entities.@interface.IDrawable;
+using SpaceInvaders.entities.interfaces;
+using IDrawable = SpaceInvaders.entities.interfaces.IDrawable;
 
 namespace SpaceInvaders.entities.components
 {

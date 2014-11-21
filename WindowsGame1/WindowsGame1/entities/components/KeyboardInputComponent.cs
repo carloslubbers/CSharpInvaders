@@ -1,43 +1,56 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using SpaceInvaders.entities.interfaces;
+using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.components
 {
     public class KeyboardInputComponent : AbstractInputComponent
     {
-        public KeyboardInputComponent(IEntity _base, PositionComponent position, FiringComponent firing) : base(_base, position, firing) { }
+        const Keys Fire = Keys.Space;
+        const Keys Left = Keys.Left;
+        const Keys Right = Keys.Right;
+
+        public KeyboardInputComponent(Entity _base, PositionComponent position, FiringComponent firing) : base(_base, position, firing) { }
 
         public override void Update(GameTime gameTime)
         {
             var ks = Keyboard.GetState(PlayerIndex.One);
 
-            const Keys fire = Keys.Space;
-            const Keys left = Keys.Left;
-            const Keys right = Keys.Right;
+            // Exit Game
+            if (ks.IsKeyDown(Keys.Escape))
+            {
+                BaseEntity.Space.Exit();
+            }
 
-            if (ks.IsKeyDown(fire))
+            // Reset enemies
+            if (ks.IsKeyDown(Keys.R))
+            {
+                BaseEntity.Space.EntityManager.ResetEnemies();
+            }
+
+            // Fire
+            if (ks.IsKeyDown(Fire))
             {
                 Firing.Fire();
             }
-            if (ks.IsKeyDown(left) && ks.IsKeyDown(right))
+
+            // Movement
+            if (ks.IsKeyDown(Left) && ks.IsKeyDown(Right))
             {
                 Moving = false;
             }
-            else if (ks.IsKeyDown(left))
+            else if (ks.IsKeyDown(Left))
             {
                 Position.EntitySpeed.X = -1.0f*MovementSpeed;
                 Moving = true;
             }
-            else if (ks.IsKeyDown(right))
+            else if (ks.IsKeyDown(Right))
             {
                 Position.EntitySpeed.X = MovementSpeed;
                 Moving = true;
             }
-            else if (ks.IsKeyUp(left))
-            {
-                Moving = false;
-            }
-            else if (ks.IsKeyUp(right))
+            else if (ks.IsKeyUp(Left) || ks.IsKeyUp(Right))
             {
                 Moving = false;
             }

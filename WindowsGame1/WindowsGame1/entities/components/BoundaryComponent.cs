@@ -1,17 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
-using SpaceInvaders.world;
+using SpaceInvaders.entities.interfaces;
 
 namespace SpaceInvaders.entities.components
 {
     public class BoundaryComponent : AbstractComponent
     {
-        IEntity _baseEntity;
+        readonly Entity _baseEntity;
         readonly PositionComponent _pos;
         readonly TextureComponent _tex;
 
         Rectangle _safeBounds;
 
-        public BoundaryComponent(IEntity baseEntity, PositionComponent pos, TextureComponent tex)
+        public BoundaryComponent(Entity baseEntity, PositionComponent pos, TextureComponent tex)
         {
             _baseEntity = baseEntity;
             _pos = pos;
@@ -24,7 +24,7 @@ namespace SpaceInvaders.entities.components
         public override void Draw(GameTime gameTime) { }
 
         public override void Update(GameTime gameTime) {
-            var viewport = Space.Viewport;
+            var viewport = _baseEntity.Space.Viewport;
             _safeBounds = new Rectangle(
                 (int)(viewport.Width * 0.0f),
                 (int)(viewport.Height * 0.0f),

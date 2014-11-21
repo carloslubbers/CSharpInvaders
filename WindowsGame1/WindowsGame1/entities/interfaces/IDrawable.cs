@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace SpaceInvaders.entities.@interface
+namespace SpaceInvaders.entities.interfaces
 {
     public interface IDrawable
     {

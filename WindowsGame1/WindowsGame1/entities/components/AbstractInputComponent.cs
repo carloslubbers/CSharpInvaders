@@ -1,4 +1,7 @@
-﻿namespace SpaceInvaders.entities.components
+﻿using SpaceInvaders.entities.interfaces;
+using SpaceInvaders.world;
+
+namespace SpaceInvaders.entities.components
 {
     public abstract class AbstractInputComponent : AbstractComponent
     {
@@ -6,12 +9,12 @@
         protected readonly PositionComponent Position;
         public float MovementSpeed = 5.0f;
 
-        private IEntity _baseEntity;
+        protected readonly Entity BaseEntity;
         protected bool Moving;
 
-        protected AbstractInputComponent(IEntity _base, PositionComponent position, FiringComponent firing)
+        protected AbstractInputComponent(Entity _base, PositionComponent position, FiringComponent firing)
         {
-            _baseEntity = _base;
+            BaseEntity = _base;
             Position = position;
             Firing = firing;
         }

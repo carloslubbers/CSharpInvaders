@@ -1,17 +1,19 @@
 ﻿using System;
 using SpaceInvaders.entities.ammo;
-using SpaceInvaders.entities.components;
+using SpaceInvaders.entities.interfaces;
 using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.components
 {
     public class FiringComponent : AbstractComponent
     {
-        private String AmmoType = "default";
+        private const String AmmoType = "default";
+        private readonly Entity _base;
         readonly PositionComponent _pos;
 
-        public FiringComponent(IEntity _base, PositionComponent pos)
+        public FiringComponent(Entity _base, PositionComponent pos)
         {
+            this._base = _base;
             _pos = pos;
         }
 
@@ -22,14 +24,14 @@ namespace SpaceInvaders.entities.components
             switch (AmmoType)
             {
                 default:
-                    ammo = new Ammo();
+                    ammo = new Ammo(_base.Space);
                     break;
             }
-            Space.BulletManager.FirePlayerBullet(ammo, _pos.EntityPosition);
+            _base.Space.BulletManager.FirePlayerBullet(ammo, _pos.EntityPosition);
         }
 
         public void SetDelay(int d) {
-            Space.BulletManager.SetDelay(d);
+            _base.Space.BulletManager.SetDelay(d);
         }
 
         public override void LoadContent() { }

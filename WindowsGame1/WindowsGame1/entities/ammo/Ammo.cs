@@ -1,15 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using SpaceInvaders.entities.components;
+using SpaceInvaders.entities.interfaces;
+using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.ammo
 {
-    public class Ammo : IEntity
+    public class Ammo : Entity
     {
         protected readonly PositionComponent PositionComponent;
         public readonly TextureComponent TextureComponent;
 
         public bool Active;
-        public Ammo()
+        public Ammo(Space space) : base(space)
         {
             PositionComponent = new PositionComponent(this);
             TextureComponent = new TextureComponent(this, PositionComponent);
@@ -25,19 +27,19 @@ namespace SpaceInvaders.entities.ammo
             Active = true;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             if (!Active) return;
             PositionComponent.Update(gameTime);
             TextureComponent.Update(gameTime);
         }
 
-        public void LoadContent()
+        public override void LoadContent()
         {
             TextureComponent.LoadContent();
         }
 
-        public void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
             if (Active)
             {

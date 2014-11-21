@@ -1,5 +1,5 @@
 ﻿using SpaceInvaders.entities.components;
-using SpaceInvaders.entities.@interface;
+using SpaceInvaders.entities.interfaces;
 using SpaceInvaders.world;
 using System.Linq;
 
@@ -7,11 +7,13 @@ namespace SpaceInvaders.managers
 {
     class CollisionManager : IUpdatable
     {
+        private readonly Space _space;
         readonly BulletManager _bulletManager;
         readonly EnemyManager _enemyManager;
 
-        public CollisionManager(BulletManager bulletManager, EnemyManager enemyManager)
+        public CollisionManager(Space space, BulletManager bulletManager, EnemyManager enemyManager)
         {
+            _space = space;
             _bulletManager = bulletManager;
             _enemyManager = enemyManager;
         }
@@ -30,7 +32,7 @@ namespace SpaceInvaders.managers
                     a.Active = false;
                     e.Active = false;
 
-                    Space.ScoreManager.AddScore(1);
+                    _space.ScoreManager.AddScore(1);
                 }
             }
         }

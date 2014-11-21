@@ -10,15 +10,15 @@ namespace SpaceInvaders.world
 {
     public class Space : Game
     {
-        private static  GraphicsDeviceManager _graphics;
-        public static SpriteBatch SpriteBatch;
-        public static ContentManager ContentManager;
-        public static Viewport Viewport;
-        public static BulletManager BulletManager;
-        public static ScoreManager ScoreManager;
-        BaseShip _ship;
-        EnemyManager _entityManager;
-        CollisionManager _collisionManager;
+        public readonly ContentManager ContentManager;
+        public SpriteBatch SpriteBatch;
+        public Viewport Viewport;
+        public BulletManager BulletManager;
+        public ScoreManager ScoreManager;
+        public EnemyManager EntityManager;
+        private readonly GraphicsDeviceManager _graphics;
+        private BaseShip _ship;
+        private CollisionManager _collisionManager;
 
         public Space()
         {
@@ -36,7 +36,7 @@ namespace SpaceInvaders.world
             base.Initialize();
 
             _ship.Initialize();
-            _entityManager.Initialize();
+            EntityManager.Initialize();
         }
 
         // Load all the game ContentManager
@@ -44,15 +44,15 @@ namespace SpaceInvaders.world
         {
             SpriteBatch = new SpriteBatch(GraphicsDevice);
 
-            _ship = new BaseShip();
+            _ship = new BaseShip(this);
             _ship.LoadContent();
 
-            _entityManager = new EnemyManager(120);
-            _entityManager.LoadContent();
+            EntityManager = new EnemyManager(this, 120);
+            EntityManager.LoadContent();
 
             BulletManager = new BulletManager();
 
-            _collisionManager = new CollisionManager(BulletManager, _entityManager);
+            _collisionManager = new CollisionManager(this, BulletManager, EntityManager);
 
             ScoreManager = new ScoreManager(_ship);
         }
@@ -65,13 +65,10 @@ namespace SpaceInvaders.world
         protected override void Update(GameTime gameTime)
         {
             Viewport = GraphicsDevice.Viewport;
-            // Allows the game to exit
-            if(Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape)) 
-                Exit();
 
             // Update game elements
             _ship.Update(gameTime);
-            _entityManager.Update(gameTime);
+            EntityManager.Update(gameTime);
             BulletManager.Update(gameTime);
             _collisionManager.Update(gameTime);
             base.Update(gameTime);
@@ -97,7 +94,7 @@ namespace SpaceInvaders.world
 
             // Update game elements
             _ship.Draw(gameTime);
-            _entityManager.Draw(gameTime);
+            EntityManager.Draw(gameTime);
             BulletManager.Draw(gameTime);
             base.Draw(gameTime);
         }
