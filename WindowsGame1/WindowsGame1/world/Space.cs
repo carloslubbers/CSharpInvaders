@@ -10,6 +10,7 @@ namespace SpaceInvaders.world
 {
     public class Space : Game
     {
+        public SoundManager SoundManager;
         public readonly ContentManager ContentManager;
         public SpriteBatch SpriteBatch;
         public Viewport Viewport;
@@ -19,6 +20,7 @@ namespace SpaceInvaders.world
         private readonly GraphicsDeviceManager _graphics;
         private BaseShip _ship;
         private CollisionManager _collisionManager;
+        private SpaceGui _gui;
 
         public Space()
         {
@@ -50,7 +52,7 @@ namespace SpaceInvaders.world
             EntityManager = new EnemyManager(this, 120);
             EntityManager.LoadContent();
 
-            _gui = new SpaceGui(_ship);
+            _gui = new SpaceGui(this, _ship);
 
             BulletManager = new BulletManager();
 
@@ -58,7 +60,7 @@ namespace SpaceInvaders.world
 
             ScoreManager = new ScoreManager(_ship);
 
-            SoundManager = new SoundManager();
+            SoundManager = new SoundManager(this);
             SoundManager.LoadContent();
             SoundManager.PlayLooped("theme");
         }
