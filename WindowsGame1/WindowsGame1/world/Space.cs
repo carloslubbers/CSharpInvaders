@@ -2,8 +2,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using SpaceInvaders.entities.components;
 using SpaceInvaders.entities.ship;
+using SpaceInvaders.gui;
 using SpaceInvaders.managers;
 
 namespace SpaceInvaders.world
@@ -22,11 +22,11 @@ namespace SpaceInvaders.world
 
         public Space()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            var graphics = new GraphicsDeviceManager(this);
             ContentManager = Content;
-            _graphics.IsFullScreen = false;
-            _graphics.PreferredBackBufferHeight = 920;
-            _graphics.PreferredBackBufferWidth = 1800;
+            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferHeight = 920;
+            graphics.PreferredBackBufferWidth = 1800;
             Content.RootDirectory = "Content";
         }
 
@@ -50,11 +50,17 @@ namespace SpaceInvaders.world
             EntityManager = new EnemyManager(this, 120);
             EntityManager.LoadContent();
 
+            _gui = new SpaceGui(_ship);
+
             BulletManager = new BulletManager();
 
             _collisionManager = new CollisionManager(this, BulletManager, EntityManager);
 
             ScoreManager = new ScoreManager(_ship);
+
+            SoundManager = new SoundManager();
+            SoundManager.LoadContent();
+            SoundManager.PlayLooped("theme");
         }
 
         // Unload all the game ContentManager
@@ -80,17 +86,7 @@ namespace SpaceInvaders.world
             // The background is black
             GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Manage the UI somewhere else
-            SpriteBatch.Begin();
-            var x = _graphics.GraphicsDevice.Viewport.Width/2;
-            var y = _graphics.GraphicsDevice.Viewport.Height/2;
-                // Draw score
-                SpriteBatch.DrawString(Content.Load<SpriteFont>("Segoe UI Mono"), "Score: " + ScoreManager.Score, new Vector2(x,y), Color.White, 0, Content.Load<SpriteFont>("Segoe UI Mono").MeasureString("Score: " + ScoreManager.Score) / 2, 1.0f, SpriteEffects.None, 0.5f);
-            
-                // Draw health
-                var hc = (HealthComponent) _ship.Components["health"];
-                SpriteBatch.DrawString(Content.Load<SpriteFont>("Segoe UI Mono"), "Health: " + hc.Health, new Vector2(x,y + 20), Color.White, 0, Content.Load<SpriteFont>("Segoe UI Mono").MeasureString("Health: " + hc.Health) / 2, 1.0f, SpriteEffects.None, 0.5f);
-            SpriteBatch.End();
+            _gui.Draw(gameTime);
 
             // Update game elements
             _ship.Draw(gameTime);

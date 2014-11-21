@@ -20,7 +20,7 @@
         <referencesInternal>
           <reference
             Id="9c62d945-8fcc-4802-a5ee-3344358180ae"
-            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDesktop%2FCSharpInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.interface Type%3DIDrawable"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.interface Type%3DIDrawable"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>

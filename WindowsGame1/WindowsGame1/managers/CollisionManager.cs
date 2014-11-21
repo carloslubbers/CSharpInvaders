@@ -31,8 +31,8 @@ namespace SpaceInvaders.managers
                 {
                     a.Active = false;
                     e.Active = false;
-
-                    _space.ScoreManager.AddScore(1);
+                    Space.SoundManager.Play("invaderkilled", 0.01f);
+                    Space.ScoreManager.AddScore(1);
                 }
             }
         }

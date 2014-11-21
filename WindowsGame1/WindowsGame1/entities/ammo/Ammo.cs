@@ -21,10 +21,14 @@ namespace SpaceInvaders.entities.ammo
         }
 
         public void Fire(Vector2 p) {
+            // Set bullet to player position and activate it
             PositionComponent.EntityPosition = p;
             PositionComponent.EntityPosition.X += 27.5f;
             PositionComponent.EntityPosition.Y -= 30.0f;
             Active = true;
+
+            // Play shooting sound
+            Space.SoundManager.Play("shoot", 0.01f);
         }
 
         public override void Update(GameTime gameTime)
