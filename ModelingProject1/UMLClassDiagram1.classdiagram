@@ -5979,7 +5979,7 @@
     <logicalClassDesignerModelHasTypes>
       <Interface Id="ef6353f7-cab8-42a5-9040-e85f738bfed7" name="ILoadable" isAbstract="false" isLeaf="false">
         <referencesInternal>
-          <reference Id="e2933475-01fa-4a25-b812-825f115417b7" handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDesktop%2FCSharpInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.interface Type%3DILoadable" tag="ViewCode">
+          <reference Id="e2933475-01fa-4a25-b812-825f115417b7" handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.interface Type%3DILoadable" tag="ViewCode">
             <elementDefinition Id="4ea1fe27-77b8-4e4e-b5ad-2595811d0d5a" />
           </reference>
         </referencesInternal>
@@ -9627,6 +9627,374 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d8afdb79-0bb3-481b-9b68-b28934af78a1" name="SoundManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="655f0cbd-769c-4082-8c76-73e72ebf4d92" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager" tag="ViewCode">
+            <elementDefinition Id="9eca8f5d-04e0-45b0-a374-1b5eeaf7988f" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="cbb72424-9ed0-4acf-908d-ccdfa08ea1e3" name="class" profile="CSharpProfile">
+            <elementDefinition Id="c6e8a99d-c893-4d06-9b96-d0c2404b9016" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="f6a244a5-7c46-4221-a432-ba5917eb5814">
+                <propertyInstance Id="804d5d06-1b6d-4f30-aee7-c02b425bbaad" name="ClrAttributes">
+                  <elementDefinition Id="86a34ef6-0ff9-49a8-9225-cecc0cac1133" />
+                </propertyInstance>
+                <elementDefinition Id="5d747638-5784-48ca-94da-d54194672966" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="b0e42170-8028-4531-be51-257e667eb345">
+                <propertyInstance Id="9e8dc294-cbb1-42a6-a56a-87efbdf54207" name="IsPartial" value="false">
+                  <elementDefinition Id="ef6d3e9f-e007-49d5-bb4c-fedbc5a7efcc" />
+                </propertyInstance>
+                <elementDefinition Id="387832e0-5509-4501-86e9-b3563bb8a5ab" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="e220f9df-6fe3-4104-849b-2ad0c1e1a85c">
+                <propertyInstance Id="aa297a4c-a26c-404c-a316-50f77a781f6a" name="IsStatic" value="False">
+                  <elementDefinition Id="4f398ca4-f27c-4411-8139-4182a8722b3c" />
+                </propertyInstance>
+                <elementDefinition Id="06a40ea4-6e74-499e-9b99-978640a44cc6" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="c3bf40e7-598e-460d-b2b0-3898fae5b672">
+                <propertyInstance Id="52c36ba6-07c1-493d-b611-f8dec1d3e420" name="IsUnsafe" value="false">
+                  <elementDefinition Id="9d799c5b-57a5-42ed-9d30-cac15dfe8cfb" />
+                </propertyInstance>
+                <elementDefinition Id="70f63754-1a15-415f-8eba-4a2869155185" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6da6ae7a-4c45-4c1e-8ed0-36ad04480b78">
+                <propertyInstance Id="1dd35905-b611-419f-960f-b22af09af8a9" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="f52aedbe-42c4-4039-870f-234e783e7d4f" />
+                </propertyInstance>
+                <elementDefinition Id="cd9bf942-67b5-4af4-8c7e-8eb43422ec6b" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="533555a8-ad55-47ab-80ba-bea52fb719b6" />
+        <suppliersInternal>
+          <interfaceRealization Id="73fb98b7-8a7c-4408-b4d7-8c4818b7b11c">
+            <interfaceMoniker Id="ef6353f7-cab8-42a5-9040-e85f738bfed7" LastKnownName="ILoadable" />
+            <elementDefinition Id="6f2e8747-86d8-46d9-b719-cfbf00df77d5" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="f3a1de8b-7b34-4ffe-9559-201ba3b46632" name="LoadContent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="a1ed94b6-c0d8-4ffc-aa08-ecf8c3e09388" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3DLoadContent" tag="ViewCode">
+                <elementDefinition Id="d53bcdc7-3da4-4c58-ad7e-cfc279da428c" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="5aa50792-2dd8-48c5-bf10-816d890a38d2" name="method" profile="CSharpProfile">
+                <elementDefinition Id="37166937-9142-4e73-8d81-a75665a22688" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="04b7e4c7-a65b-4b0b-9347-cf33772ce1fe">
+                    <propertyInstance Id="efca2d10-78c4-4a80-bf81-6f4373d6c6ca" name="ClrAttributes">
+                      <elementDefinition Id="1eab3411-0f87-4d88-8522-264e1a26a279" />
+                    </propertyInstance>
+                    <elementDefinition Id="5f259fda-5093-4568-9725-98237e0968ed" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b7f456a7-97a1-4d92-8287-f56a22cd9c07">
+                    <propertyInstance Id="98a330e8-f5e0-4ae2-a729-54862fee5118" name="IsPartial" value="false">
+                      <elementDefinition Id="13abd51c-4c87-4fa4-9995-972b404ec696" />
+                    </propertyInstance>
+                    <elementDefinition Id="70b7a507-7326-4e7e-aea3-96b288b9839a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7cca0c93-0be4-4a90-b452-37b66432163b">
+                    <propertyInstance Id="851204f6-317f-4106-b7f0-42f8df802506" name="IsUnsafe" value="false">
+                      <elementDefinition Id="2bd49500-ed53-41fa-8967-b5c129103918" />
+                    </propertyInstance>
+                    <elementDefinition Id="f1755af1-1151-4123-b47f-6f976a3667e3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ebd7cf4c-c676-4bf5-ad9b-95033b813d53">
+                    <propertyInstance Id="705bc0b1-6c29-4f4a-b898-6d415d42d695" name="Inheritance" value="none">
+                      <elementDefinition Id="a1abbc06-d6af-4d23-8b1c-7a57c84651d8" />
+                    </propertyInstance>
+                    <elementDefinition Id="dc9b45d7-0e56-43bf-b351-16ccc3a6c20b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c808638c-9816-4160-bdda-4e3b657863a3">
+                    <propertyInstance Id="206ef818-e19b-476f-ac56-d4e2fe3b2f77" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="9db6a19f-2cd4-4871-a7fb-7375ffdb91a8" />
+                    </propertyInstance>
+                    <elementDefinition Id="01f96f99-759b-4485-a495-6b1cbeb3902e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c55077b2-86cb-452a-9411-4eafd60cc8c4">
+                    <propertyInstance Id="8d51e562-400b-49a0-8648-f166e7d5d707" name="params" value="false">
+                      <elementDefinition Id="0d82deca-d9a0-4e45-b532-31ec73e7e3ae" />
+                    </propertyInstance>
+                    <elementDefinition Id="a8509f64-6c77-4d29-b67d-d20e5c3ecc65" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="661e101e-7ce6-4015-9043-e2fd459bdd34" />
+          </operation>
+          <operation Id="55bfd9e2-88ec-4d5b-ad46-451855c6fdd7" name="PlayLooped" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="2c94d3d2-7d6d-4726-a46d-5e91c3108273" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D(Name%3DPlayLooped OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                <elementDefinition Id="86a584ef-101e-4e28-ae51-50fa4ba25dd3" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="b1ad957d-56f2-40e9-9160-65559c2ba10d" name="method" profile="CSharpProfile">
+                <elementDefinition Id="379cb496-1100-4ef2-954b-febe0bcf2e2d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b51112f1-80e5-4c27-a88e-cdc54f999ce9">
+                    <propertyInstance Id="dc7601f0-bedc-4838-bc80-cabd578c892f" name="ClrAttributes">
+                      <elementDefinition Id="1182fd6b-58ff-4fe4-a331-5d194234e870" />
+                    </propertyInstance>
+                    <elementDefinition Id="910172b4-aedd-4daa-9762-f96c7767056b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6c551d72-43c2-46bb-a376-1c430e2e8511">
+                    <propertyInstance Id="9f57d409-5f69-4be5-883d-b175be605d76" name="IsPartial" value="false">
+                      <elementDefinition Id="753f93eb-00f7-4576-b187-9a8c9d4ecc27" />
+                    </propertyInstance>
+                    <elementDefinition Id="897449ae-6304-4379-a93d-12038dff339a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="455265e3-003f-4aa8-a3ad-073173138962">
+                    <propertyInstance Id="0e43364b-358d-4a86-8152-46beefd391d0" name="IsUnsafe" value="false">
+                      <elementDefinition Id="b54f6736-f099-427a-8016-42d5e4829485" />
+                    </propertyInstance>
+                    <elementDefinition Id="519fd140-0691-4e3b-aedc-face93fb8059" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="30de0e3a-7b7d-48e3-a039-94e3ba519f6a">
+                    <propertyInstance Id="069fce19-b715-47c8-9979-e449767f75a9" name="Inheritance" value="none">
+                      <elementDefinition Id="bc934d33-2341-47a2-b678-000d6580d28a" />
+                    </propertyInstance>
+                    <elementDefinition Id="3598a662-b51d-4ea3-a3c7-0aa13e34ac10" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5b510546-8c25-4450-9718-ce79ffbeb3d2">
+                    <propertyInstance Id="d46871c2-a555-40f8-ad4c-28e3b05ef2c1" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="38382fcf-f442-4702-aa7c-aadc6eccf3ef" />
+                    </propertyInstance>
+                    <elementDefinition Id="d16b06b7-08d6-461a-bdef-1586537dfd65" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f4ad93fe-cd81-4e86-a8e0-e33994760ca2">
+                    <propertyInstance Id="67eb6f14-5bdc-4c7b-9ac0-08887f61695c" name="params" value="false">
+                      <elementDefinition Id="e031b74e-4718-445f-a96d-d744041ad956" />
+                    </propertyInstance>
+                    <elementDefinition Id="526b8453-bd23-40f4-9ca7-ab11a80d1487" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="90151b6a-2c18-48aa-bb10-a23c7f9aef51" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="48503fca-a356-43dc-815a-a8a356da067e" name="p" direction="In">
+                  <referencesInternal>
+                    <reference Id="a15498f3-55ce-4b14-acc1-2deb8ef152a1" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D(Name%3DPlayLooped OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dp" tag="ViewCode">
+                      <elementDefinition Id="6b9ec62d-3eb4-4039-a85c-ed78e44b5df6" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="08e3fe42-f428-4b58-97dd-ed908f453270" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="49a675d0-1e95-49e9-94c7-37082dc8a02b" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="915e7b11-630c-4847-b96b-8aeeb74af9bb" name="Play" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="fb13364b-a73c-4994-b7f1-49e9cef05f2e" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                <elementDefinition Id="3bccb16e-1056-40b4-a26e-cb2e8ed904ad" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="4c17b252-70e2-4e32-89c2-f629efd3b318" name="method" profile="CSharpProfile">
+                <elementDefinition Id="a1d687cd-8d86-4958-8992-80bbf965f233" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="61a62824-62cc-4a60-b022-16e4d7cf42ed">
+                    <propertyInstance Id="3fadc4a2-a40f-40b1-a0ab-f5eaf3a4e599" name="ClrAttributes">
+                      <elementDefinition Id="013bacd7-87fa-4443-b3ce-d1e3a58edf95" />
+                    </propertyInstance>
+                    <elementDefinition Id="cab83d9f-ba54-439d-84ee-6f77d0a9d193" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1817334e-0b56-405e-9b31-2b17eaa2503e">
+                    <propertyInstance Id="0dd61744-b21c-4503-86f5-d9bae577658c" name="IsPartial" value="false">
+                      <elementDefinition Id="b2b773b8-9ce1-4180-ae65-2262e1f9a3df" />
+                    </propertyInstance>
+                    <elementDefinition Id="4ab22a96-f38f-4feb-80da-0239daa4063f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3fcbcc6e-7b61-4cd7-87ce-633d955736d0">
+                    <propertyInstance Id="f9132f6c-8af5-4afc-82d8-c5bc4d5b4438" name="IsUnsafe" value="false">
+                      <elementDefinition Id="a92369d4-c13c-4efd-a81f-6e28b09df4df" />
+                    </propertyInstance>
+                    <elementDefinition Id="e5bf11f2-a676-43af-aa68-7ae3f178dd4b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6d688f41-2ea9-478d-a5fa-963e9e4544f1">
+                    <propertyInstance Id="79638b90-bff0-4a94-bf49-70cbea437753" name="Inheritance" value="none">
+                      <elementDefinition Id="3a2651ae-b96b-4c69-9e35-e8e1bbc65e12" />
+                    </propertyInstance>
+                    <elementDefinition Id="aa2da0b4-296a-4011-a812-744e81db62f4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b812a72f-7b53-4b40-85c5-1cf14505bf71">
+                    <propertyInstance Id="250c9e03-4863-4328-b4a5-2bbee71b142f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5bed920f-b607-44e6-96be-a295c08aa7c7" />
+                    </propertyInstance>
+                    <elementDefinition Id="1ceaa520-e2f4-4df6-b185-4d0f56be2ea1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="85c955e4-f52a-49e2-a73e-1d577614e16a">
+                    <propertyInstance Id="098f2dea-1188-45dc-893a-406d6002ec4c" name="params" value="false">
+                      <elementDefinition Id="793a4697-70e1-4c72-a4dd-da6909208373" />
+                    </propertyInstance>
+                    <elementDefinition Id="774c2611-cf86-4760-afcc-8c99422d643b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0e91577b-1d3b-467c-ba0b-58eb83f7e299" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a2a9d0c7-5a74-4752-b57b-63c251bbbf2f" name="p" direction="In">
+                  <referencesInternal>
+                    <reference Id="3424c189-3c49-4309-adde-30d216104dbd" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dp" tag="ViewCode">
+                      <elementDefinition Id="dfad9340-db96-4913-9bd2-b1fac64bab3e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="9d014b20-6b50-4453-b6c5-0fc15946b07d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="49a675d0-1e95-49e9-94c7-37082dc8a02b" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c921ae54-cace-4cb9-bbbb-f9a8e50925b5" name="Play" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="85bcab8f-6a93-4c08-acf9-8f11011d57a9" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)])" tag="ViewCode">
+                <elementDefinition Id="05de0bde-421d-494e-b798-8da86a05d6cb" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c2091a6a-39f7-4a19-960d-86370b1850c9" name="method" profile="CSharpProfile">
+                <elementDefinition Id="50ea518f-8a7d-4465-b3b6-6c18735f9734" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8940f812-79a9-4aec-86d5-3739702738ba">
+                    <propertyInstance Id="7437ba51-cf6b-4790-a06e-c3b0180ebe7b" name="ClrAttributes">
+                      <elementDefinition Id="f81bec76-7f36-47a1-965e-97ad560c47e1" />
+                    </propertyInstance>
+                    <elementDefinition Id="74392079-f9bc-40e6-b0d4-1e0ceaf1331b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="27495d95-0c09-4990-86af-9942472478c5">
+                    <propertyInstance Id="524a48ca-7cf2-4bec-a647-f069378d94a5" name="IsPartial" value="false">
+                      <elementDefinition Id="461a9443-7113-462e-bdf8-aa44367c8bef" />
+                    </propertyInstance>
+                    <elementDefinition Id="6d36f80b-5e73-4258-b3eb-67504a35e8fb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="62f5b4d4-5f50-4f80-8df4-70969e974544">
+                    <propertyInstance Id="bdf79d2d-dfc7-47a0-b2a3-a3dac200312d" name="IsUnsafe" value="false">
+                      <elementDefinition Id="a19f1b2a-d5e7-4faf-ab85-b345aa83b24b" />
+                    </propertyInstance>
+                    <elementDefinition Id="a1a625a8-f7ff-44ff-b104-c44ebb201719" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="13fb77ae-1b88-4f3a-a746-5eb4f532640e">
+                    <propertyInstance Id="890bc5d1-f481-4f6e-b787-d01ec7b39085" name="Inheritance" value="none">
+                      <elementDefinition Id="6dae7d1c-93d2-4b6c-828d-489cebb0d9c2" />
+                    </propertyInstance>
+                    <elementDefinition Id="d96a5cad-ef2d-434f-b0be-eb23f1aa32b3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f2f9f204-01e7-413f-87ef-06fe13d5123e">
+                    <propertyInstance Id="92d72de6-8a64-49d1-b8c5-015cd4d9f7ea" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="4efec5ff-1413-4be2-96c8-953ce588c745" />
+                    </propertyInstance>
+                    <elementDefinition Id="095c5fdf-f690-4f70-89de-7ce879220a9d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ac37d2e6-0282-4332-9a7b-c86c98876e80">
+                    <propertyInstance Id="5e089a96-9666-453f-96b4-bab4c105cd74" name="params" value="false">
+                      <elementDefinition Id="78402fa5-91e3-4fca-9424-d3cf5e38ce5a" />
+                    </propertyInstance>
+                    <elementDefinition Id="00e07927-0e24-45dc-8ef4-a624621ff9ab" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="34d32ef1-2e4e-4341-a617-b47d2bb2d124" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a6138190-2e81-4ba0-9f5a-1d07688fdddc" name="p" direction="In">
+                  <referencesInternal>
+                    <reference Id="ee3e3530-3ab8-47a1-bb06-038d8ed9d075" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3Dp" tag="ViewCode">
+                      <elementDefinition Id="cfbe5f2f-b380-45e7-a850-422362c1c022" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="b699c128-b4a3-458c-ab75-226a70adcdd6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="49a675d0-1e95-49e9-94c7-37082dc8a02b" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b991d664-6283-428f-be95-d352ab08168a" name="vol" direction="In">
+                  <referencesInternal>
+                    <reference Id="70cd9b10-948c-4c87-a51d-cdf8590e06ca" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3Dvol" tag="ViewCode">
+                      <elementDefinition Id="fecdc698-7597-4596-a6d0-55f163f6b1ce" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="1583a50b-f1cf-46db-9cd6-ed94aa5cd12d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4768f320-bd5e-4f8a-9b34-940c71779273" LastKnownName="Single" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="198b9359-5c83-4c67-9e58-a8c8b5e90fce" name="SoundManager" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f200cafc-1e79-4eac-9426-b0e17d61c66f" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.managers Type%3DSoundManager Member%3D.ctor" tag="ViewCode">
+                <elementDefinition Id="fb608c5f-200b-4505-b9ea-c66a27e992c8" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c6ecd06c-e044-4141-81a3-83b911a4d9b9" name="method" profile="CSharpProfile">
+                <elementDefinition Id="1a7b4d9a-dd18-4b67-9792-e7c4a765e030" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c5c00b6a-4203-4c72-b97f-212d3e42529f">
+                    <propertyInstance Id="987ef664-f93a-4f17-9e24-1d0865436d15" name="ClrAttributes">
+                      <elementDefinition Id="31965f6b-f42c-431d-951f-6171c77fe885" />
+                    </propertyInstance>
+                    <elementDefinition Id="1f2ec6cc-3614-4f33-988c-c942902ccb16" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="59c288f1-088b-4193-9f81-fe8fd4299dba">
+                    <propertyInstance Id="f79dc2df-7747-4e87-ac3f-0e6970b7a5ea" name="IsPartial" value="false">
+                      <elementDefinition Id="c60f390e-38bb-4d6b-b6ba-ea4d50c8d700" />
+                    </propertyInstance>
+                    <elementDefinition Id="c61e2923-33f7-4597-8825-2dba6f65959f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ca8f5c13-eb86-42b8-9013-7f7b8eacca77">
+                    <propertyInstance Id="f1b754f9-aec0-4cfd-818e-407a03535dbf" name="IsUnsafe" value="false">
+                      <elementDefinition Id="c4ba7b70-49f3-4ce5-9c79-e502884181e0" />
+                    </propertyInstance>
+                    <elementDefinition Id="98c5ca3e-1a51-4f19-8bc5-b6dfdc192ccc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bc98f65a-1c69-4f39-8d6d-560c930dcee6">
+                    <propertyInstance Id="a9b693a8-bd28-4598-9358-f05b4b94187f" name="Inheritance" value="none">
+                      <elementDefinition Id="1ce37600-69bc-4299-9830-bfddc7968e85" />
+                    </propertyInstance>
+                    <elementDefinition Id="ec086c10-7f12-4288-9b75-402f3ad38c5f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5ae04f54-9de2-40f6-9629-d9f6cf87f084">
+                    <propertyInstance Id="27b3786c-7301-4c22-b8ed-b6f60c9b4fa2" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="cec5bf0f-b408-459a-9217-56759a50a61c" />
+                    </propertyInstance>
+                    <elementDefinition Id="d1ebd068-34eb-4a67-815f-3d12ae9da400" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="577dc72b-864a-4b70-b75c-84616e27c9e7">
+                    <propertyInstance Id="de7c3903-54c8-4c47-8bff-6e1d591c59f6" name="params" value="false">
+                      <elementDefinition Id="3ed5ac86-b093-41af-9079-5164b0375fd0" />
+                    </propertyInstance>
+                    <elementDefinition Id="b1754929-a20f-4e6a-9054-6db8eafee12d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="ff90681e-ff3f-4a67-bb1a-3c923fa6e512" />
           </operation>
         </ownedOperationsInternal>
       </class>
