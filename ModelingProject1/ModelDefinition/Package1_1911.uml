@@ -158,7 +158,7 @@
         <referencesInternal>
           <reference
             Id="4ea1fe27-77b8-4e4e-b5ad-2595811d0d5a"
-            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDesktop%2FCSharpInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.interface Type%3DILoadable"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.interface Type%3DILoadable"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
