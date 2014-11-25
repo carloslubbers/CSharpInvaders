@@ -1,13 +1,14 @@
-﻿using SpaceInvaders.world;
+﻿using SpaceInvaders.entities.components;
+using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.ammo
 {
-    class EnemyAmmo : Ammo
+    class EnemyAmmo : AbstractAmmo
     {
         public EnemyAmmo(Space space) : base(space)
         {
-            TextureComponent.SetTexture("enemy1Texture");
-            PositionComponent.EntitySpeed.Y = 15.0f;
+            ((TextureComponent)Components["texture"]).SetTexture("enemy1Texture");
+            ((PositionComponent)Components["position"]).EntitySpeed.Y = 15.0f;
         }
     }
 }

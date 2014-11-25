@@ -10,7 +10,7 @@ namespace SpaceInvaders.managers
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
     public class BulletManager
     {
-        readonly Ammo[] _playerBullets;
+        readonly AbstractAmmo[] _playerBullets;
         int _playerBulletCount;
         readonly Timer _timer;
         int _timerDelay = 250;
@@ -18,14 +18,14 @@ namespace SpaceInvaders.managers
 
         public BulletManager()
         {
-            _playerBullets = new Ammo[100];
+            _playerBullets = new AbstractAmmo[100];
             _timer = new Timer();
             _timer.Elapsed += TimerFinished;
             _timer.Interval = _timerDelay;
             _timer.Enabled = true;
         }
 
-        public void FirePlayerBullet(Ammo ammo, Vector2 p) {            
+        public void FirePlayerBullet(AbstractAmmo ammo, Vector2 p) {            
             _timer.Start();
 
             if (!_ready) return;
@@ -62,7 +62,7 @@ namespace SpaceInvaders.managers
             _ready = true;
         }
 
-        public IEnumerable<Ammo> GetPlayerBullets()
+        public IEnumerable<AbstractAmmo> GetPlayerBullets()
         {
             return _playerBullets;
         }

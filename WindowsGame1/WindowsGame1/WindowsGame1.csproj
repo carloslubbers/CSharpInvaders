@@ -73,6 +73,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\ammo\AbstractAmmo.cs" />
     <Compile Include="entities\ammo\Ammo.cs" />
     <Compile Include="entities\ammo\EnemyAmmo.cs" />
     <Compile Include="entities\components\AbstractInputComponent.cs" />
