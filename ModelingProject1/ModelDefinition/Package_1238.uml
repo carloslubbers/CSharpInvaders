@@ -15,7 +15,6 @@
       <class
         Id="113b707c-08b5-4a34-995e-397b602d3d4f"
         name="SpaceGui"
-        visibility="Package"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -70,11 +69,11 @@
         </appliedStereotypesInternal>
         <suppliersInternal>
           <interfaceRealization
-            Id="ac712934-a413-44f9-bca8-9c7de3eac9d8">
+            Id="5ce04d17-b340-41c1-bbaa-0df34db46633">
             <interfaceMoniker
-              Id="f335e2b3-83be-4ced-b4a6-bfefd3f8ae3e"
+              Id="f894b1bf-270d-483b-8af5-5095561ccc2e"
               LastKnownName="IDrawable"
-              LastKnownLocation="Package1_1911.uml" />
+              LastKnownLocation="Package_1234.uml" />
           </interfaceRealization>
         </suppliersInternal>
         <ownedAttributesInternal>
@@ -279,94 +278,75 @@
                 LastKnownLocation="Package3_1911.uml" />
             </type_NamedElement>
           </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="f0c6b310-9c9c-4181-8ffc-9c206fa2183c"
-            name="SpaceGui"
+          <property
+            Id="2c48c34d-ab60-472f-badc-1cbd692a52c8"
+            name="_space"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
             <referencesInternal>
               <reference
-                Id="8324a36f-0702-4615-8b49-3fb6b04f5df3"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.gui Type%3DSpaceGui Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ship Type%3DBaseShip)])"
+                Id="e1423576-cd31-434c-823c-33805fe0c67e"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.gui Type%3DSpaceGui Member%3D_space"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="a5c29748-75c7-4839-9ee2-8f4d84648d69"
-                name="method"
+                Id="75e59317-15d7-40cc-b320-5b49e9676e9a"
+                name="field"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="db7aba1f-4195-4bc5-84eb-28ec9ef68796">
+                    Id="80350258-84d8-4a19-93f8-10c4cf35db49">
                     <propertyInstance
-                      Id="d7cf5707-0e02-49ce-80ee-3c9450f736fa"
+                      Id="b1eb5ec2-a4d3-4625-bbec-e9e022108d73"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="755d1dd0-1383-422c-8d40-65e0745d323f">
+                    Id="3292a803-b5c3-4e44-94a4-4b63433c1de9">
                     <propertyInstance
-                      Id="b9f0c0ee-7286-4a7d-824e-94fbe07175db"
-                      name="IsPartial"
+                      Id="2e07107a-ccdb-4037-acd0-ef116b1cddde"
+                      name="IsConst"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="91b98961-dc0f-4cee-99be-255adbd142f7">
+                    Id="4fc62397-ec09-4bea-8fdb-67527c588f10">
                     <propertyInstance
-                      Id="d34ed532-8b87-4f63-a85d-789de5598d5b"
-                      name="IsUnsafe"
+                      Id="dff3518e-0057-44e0-a1ee-5edf4e1f0a8c"
+                      name="IsNullable"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="81ae1dfd-a7c3-44f1-bf33-eefbc0a2c65b">
+                    Id="ecee41d4-93b5-4684-950a-a611f0725b8c">
                     <propertyInstance
-                      Id="4953ac44-4ede-460f-9f4c-cc1afd96d5b6"
-                      name="Inheritance"
-                      value="none" />
+                      Id="641d9045-0185-446d-964b-10b067b4c217"
+                      name="IsVolatile"
+                      value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f2e9a80a-b13a-4c9d-9685-f582447d3085">
+                    Id="48850ff5-9b96-4cbb-9656-b536cb8b1462">
                     <propertyInstance
-                      Id="d33c9732-636b-46f2-8473-2271553cfa1a"
+                      Id="08132c3c-c329-4b15-a5c4-7dd8a53da54e"
                       name="PackageVisibility"
                       value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c67857f3-c287-43ea-9816-f52d98952830">
-                    <propertyInstance
-                      Id="7b366736-d3f4-46b3-a381-2ac0a0c8a4f7"
-                      name="params"
-                      value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="4d3484ca-7988-4611-a2c6-5753bb76ebfe"
-                  name="ship"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="cadb45a6-cc20-435d-b349-39259ebc97df"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.gui Type%3DSpaceGui Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ship Type%3DBaseShip)]) ParameterIdentifier%3Dship"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="24cf155b-7e56-4c8b-8bdc-4da0f1a8fd59"
-                      LastKnownName="BaseShip"
-                      LastKnownLocation="Package3_1911.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            <type_NamedElement>
+              <classMoniker
+                Id="9a618ae3-2197-4a89-aa5a-8d2373c9e729"
+                LastKnownName="Space"
+                LastKnownLocation="Package_1651.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
           <operation
             Id="34548b8a-9235-422b-9cd1-b5a388ea6574"
             name="Draw"
@@ -448,6 +428,111 @@
                       Id="ee59a131-027b-4f55-b8de-6bd6bacbd092"
                       LastKnownName="GameTime"
                       LastKnownLocation="Package3_1852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3b5d3ce6-26a3-4729-b3d0-68b780e700fc"
+            name="SpaceGui"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1bbb87e8-7f90-4c00-b8b9-07a7d925b913"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.gui Type%3DSpaceGui Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DSpace)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ship Type%3DBaseShip)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="08453871-6c75-47d1-bfa1-5c1fe1b24270"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="859d5b22-303b-42e4-9bf6-83688baa6466">
+                    <propertyInstance
+                      Id="6c1ef6ea-644f-4d08-80a7-6ca69ffa6a5b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c24aad39-f28a-4d7c-8b20-90c354750946">
+                    <propertyInstance
+                      Id="33e81d6a-7337-4e9c-9b25-3cd879666147"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45998b92-f90a-4771-b3e0-4c6bac5ffab2">
+                    <propertyInstance
+                      Id="b21f0a32-d1ca-4ac8-87d2-c833eca1ce25"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e9bee62-9902-497d-b507-b208c04234ea">
+                    <propertyInstance
+                      Id="349d6811-aaf4-47ac-aba0-c7845faaeea8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85b5b71e-8cd1-43c6-b292-b843689f55e6">
+                    <propertyInstance
+                      Id="3ed7e076-68bc-4f89-8dfe-b2151614d7f9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33f8d664-8655-4b43-a448-a7154cbb17d6">
+                    <propertyInstance
+                      Id="db2031a8-17c8-40e4-ad03-0d523a134e3c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0b92aa4-0b2f-4802-8430-843d7602b20b"
+                  name="space"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6e26ed8e-3a87-4764-ad4c-999ab18d599c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.gui Type%3DSpaceGui Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DSpace)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ship Type%3DBaseShip)]) ParameterIdentifier%3Dspace"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9a618ae3-2197-4a89-aa5a-8d2373c9e729"
+                      LastKnownName="Space"
+                      LastKnownLocation="Package_1651.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0859c04c-3d4f-40c2-9419-f40ed7a82b6f"
+                  name="ship"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9d03453f-6f8f-4aba-b9af-1cd0949e931b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.gui Type%3DSpaceGui Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.world Type%3DSpace)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ship Type%3DBaseShip)]) ParameterIdentifier%3Dship"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="24cf155b-7e56-4c8b-8bdc-4da0f1a8fd59"
+                      LastKnownName="BaseShip"
+                      LastKnownLocation="Package3_1911.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

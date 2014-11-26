@@ -21,7 +21,7 @@ namespace SpaceInvaders.entities.ship
             var offsetComponent = new OffsetComponent(this, positionComponent);
             var boundaryComponent = new BoundaryComponent(this, positionComponent, textureComponent);
             var firingComponent = new FiringComponent(this, positionComponent);
-            var inputComponent = new GamePadInputComponent(this, positionComponent, firingComponent);
+            var inputComponent = new KeyboardInputComponent(this, positionComponent, firingComponent);
             var healthComponent = new HealthComponent(); // 100 Health
 
             Components.Add("position", positionComponent);

@@ -2019,7 +2019,7 @@
         <referencesInternal>
           <reference
             Id="b6f1174a-84cc-4bf7-9384-9239e15aba80"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDesktop%2FCSharpInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DProgram"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DProgram"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -2078,7 +2078,7 @@
             <referencesInternal>
               <reference
                 Id="0bb78e3e-6882-4354-b342-926e5ee6b7a6"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDesktop%2FCSharpInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DProgram Member%3DMain"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DProgram Member%3DMain"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>

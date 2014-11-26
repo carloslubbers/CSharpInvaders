@@ -23,7 +23,7 @@ namespace SpaceInvaders.managers
             var bgEffect = _space.ContentManager.Load<SoundEffect>(p);
             var instance = bgEffect.CreateInstance();
             instance.IsLooped = true;
-            bgEffect.Play(0.1f, 0.0f, 0.0f);
+            bgEffect.Play(0.05f, 0.0f, 0.0f);
         }
 
         public void Play(string p)
