@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using SpaceInvaders.entities.ship;
 using SpaceInvaders.gui;
 using SpaceInvaders.managers;
@@ -17,7 +16,6 @@ namespace SpaceInvaders.world
         public BulletManager BulletManager;
         public ScoreManager ScoreManager;
         public EnemyManager EntityManager;
-        private readonly GraphicsDeviceManager _graphics;
         private BaseShip _ship;
         private CollisionManager _collisionManager;
         private SpaceGui _gui;
