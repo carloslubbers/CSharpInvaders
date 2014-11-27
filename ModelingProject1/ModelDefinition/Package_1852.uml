@@ -3597,7 +3597,7 @@
           </property>
           <property
             Id="d1fff95b-2169-4713-ac69-d8a6a2a87af3"
-            name="entityPosition"
+            name="entityGetComponent<PositionComponent>()"
             visibility="Protected"
             isLeaf="false"
             isStatic="false"
@@ -3609,7 +3609,7 @@
             <referencesInternal>
               <reference
                 Id="8bacabf5-3cbb-47e9-a8cf-eacaccec4f18"
-                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DEntity Member%3DentityPosition"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DEntity Member%3DentityGetComponent<PositionComponent>()"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -4101,7 +4101,7 @@
           </operation>
           <operation
             Id="bc63754b-a82d-40cf-86bf-6ef2158141f3"
-            name="getPosition"
+            name="getGetComponent<PositionComponent>()"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -4110,7 +4110,7 @@
             <referencesInternal>
               <reference
                 Id="9859e5aa-1bd1-4891-8f3f-53d073b5d901"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DEntity Member%3DgetPosition"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-f1e242ae8fc57e1141c0d763cff2e51b94488775%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders Type%3DEntity Member%3DgetGetComponent<PositionComponent>()"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5542,7 +5542,7 @@
     <packageHasNamedElement>
       <class
         Id="bb67e40b-d85c-44bd-a099-a200388a0a6e"
-        name="HasPosition"
+        name="HasGetComponent<PositionComponent>()"
         visibility="Package"
         isAbstract="false"
         isLeaf="false"
@@ -5550,7 +5550,7 @@
         <referencesInternal>
           <reference
             Id="4c7dcfb9-13d5-4d1a-abe4-4782d8440cb2"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>()"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -5611,7 +5611,7 @@
             <referencesInternal>
               <reference
                 Id="2262d615-353d-4c73-b48e-3afca51986f1"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3DentityOffset"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3DentityOffset"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5666,7 +5666,7 @@
           </property>
           <property
             Id="a6175fe5-d9fe-4e08-8a46-2d577a1ab1c5"
-            name="entityPosition"
+            name="entityGetComponent<PositionComponent>()"
             visibility="Protected"
             isLeaf="false"
             isStatic="false"
@@ -5678,7 +5678,7 @@
             <referencesInternal>
               <reference
                 Id="bd8a4cdf-3368-4f9a-b6d7-a7ec297194b2"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3DentityPosition"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3DentityGetComponent<PositionComponent>()"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5735,7 +5735,7 @@
         <ownedOperationsInternal>
           <operation
             Id="f3df63d1-5d26-4c66-ae7a-53479764e018"
-            name="HasPosition"
+            name="HasGetComponent<PositionComponent>()"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -5744,7 +5744,7 @@
             <referencesInternal>
               <reference
                 Id="91f3f522-eedc-4400-8cb2-e8168076b751"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3D.ctor"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5809,7 +5809,7 @@
             <referencesInternal>
               <reference
                 Id="273fe48c-c3d3-4593-aec1-95e0918cf8ab"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3D(Name%3DsetOffset OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3D(Name%3DsetOffset OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5871,7 +5871,7 @@
                   <referencesInternal>
                     <reference
                       Id="4b75cbea-ef98-4862-aa59-c0061cae9111"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3D(Name%3DsetOffset OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3Dx"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3D(Name%3DsetOffset OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3Dx"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -5890,7 +5890,7 @@
                   <referencesInternal>
                     <reference
                       Id="9de85e0e-13ad-4689-91da-6da74f36e851"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3D(Name%3DsetOffset OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3Dy"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3D(Name%3DsetOffset OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3Dy"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -5905,7 +5905,7 @@
           </operation>
           <operation
             Id="7b364487-0f95-4357-ae7b-96c09c22f1c1"
-            name="setPosition"
+            name="setGetComponent<PositionComponent>()"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -5914,7 +5914,7 @@
             <referencesInternal>
               <reference
                 Id="b6df8bfd-fd2b-48ef-abe3-4cdf394cf306"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3D(Name%3DsetPosition OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DVector2)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3D(Name%3DsetGetComponent<PositionComponent>() OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DVector2)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5976,7 +5976,7 @@
                   <referencesInternal>
                     <reference
                       Id="728b165f-bd3e-4b20-a37d-da79e2831f20"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3D(Name%3DsetPosition OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DVector2)]) ParameterIdentifier%3Dp"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3D(Name%3DsetGetComponent<PositionComponent>() OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FMicrosoft XNA%2FXNA Game Studio%2Fv4.0%2FReferences%2FWindows%2Fx86%2FMicrosoft.Xna.Framework.dll&quot; Namespace%3DMicrosoft.Xna.Framework Type%3DVector2)]) ParameterIdentifier%3Dp"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -5991,7 +5991,7 @@
           </operation>
           <operation
             Id="2b207b91-8753-48c9-9bd2-f80d4f514353"
-            name="getPosition"
+            name="getGetComponent<PositionComponent>()"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -6000,7 +6000,7 @@
             <referencesInternal>
               <reference
                 Id="cafa8904-98d7-4d01-add7-86ded46f0167"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasPosition Member%3DgetPosition"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FCarlos%2FDropbox%2FSchool%2FDesign Patterns%2FSpaceInvaders%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe&quot; Namespace%3DSpaceInvaders Type%3DHasGetComponent<PositionComponent>() Member%3DgetGetComponent<PositionComponent>()"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>

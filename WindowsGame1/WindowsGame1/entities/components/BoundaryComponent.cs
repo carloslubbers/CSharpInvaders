@@ -5,17 +5,14 @@ namespace SpaceInvaders.entities.components
 {
     public class BoundaryComponent : AbstractComponent
     {
-        readonly Entity _baseEntity;
-        readonly PositionComponent _pos;
         readonly TextureComponent _tex;
 
         Rectangle _safeBounds;
 
-        public BoundaryComponent(Entity baseEntity, PositionComponent pos, TextureComponent tex)
+        public BoundaryComponent(Entity baseEntity) : base(baseEntity)
         {
-            _baseEntity = baseEntity;
-            _pos = pos;
-            _tex = tex;
+            BaseEntity = baseEntity;
+            _tex = BaseEntity.GetComponent<TextureComponent>();
         }
         public override void LoadContent()
         {
@@ -24,14 +21,14 @@ namespace SpaceInvaders.entities.components
         public override void Draw(GameTime gameTime) { }
 
         public override void Update(GameTime gameTime) {
-            var viewport = _baseEntity.Space.Viewport;
+            var viewport = BaseEntity.Space.Viewport;
             _safeBounds = new Rectangle(
                 (int)(viewport.Width * 0.0f),
                 (int)(viewport.Height * 0.0f),
                 (int)(viewport.Width * (1 - 2 * 0.0f)),
                 (int)(viewport.Height * (1 - 2 * 0.0f)));
 
-            _pos.EntityPosition.X = MathHelper.Clamp(_pos.EntityPosition.X, _safeBounds.Left, _safeBounds.Right - _tex.Texture.Width);
+            BaseEntity.GetComponent<PositionComponent>().EntityPosition.X = MathHelper.Clamp(BaseEntity.GetComponent<PositionComponent>().EntityPosition.X, _safeBounds.Left, _safeBounds.Right - _tex.Texture.Width);
         }
 
         public Rectangle GetSafeBounds()

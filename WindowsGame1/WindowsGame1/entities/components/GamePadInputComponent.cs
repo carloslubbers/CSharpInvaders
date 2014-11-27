@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvaders.entities.interfaces;
-using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.components
 {
@@ -11,7 +10,7 @@ namespace SpaceInvaders.entities.components
         const Buttons Left = Buttons.DPadLeft;
         const Buttons Right = Buttons.DPadRight;
 
-        public GamePadInputComponent(Entity _base, PositionComponent position, FiringComponent firing) : base(_base, position, firing)
+        public GamePadInputComponent(Entity baseEntity) : base(baseEntity)
         {
         }
 
@@ -44,12 +43,12 @@ namespace SpaceInvaders.entities.components
             }
             else if (gp.IsButtonDown(Left))
             {
-                Position.EntitySpeed.X = -1.0f * MovementSpeed;
+                BaseEntity.GetComponent<PositionComponent>().EntitySpeed.X = -1.0f * BaseEntity.GetComponent<PositionComponent>().MovementSpeed.X;
                 Moving = true;
             }
             else if (gp.IsButtonDown(Right))
             {
-                Position.EntitySpeed.X = MovementSpeed;
+                BaseEntity.GetComponent<PositionComponent>().EntitySpeed.X = BaseEntity.GetComponent<PositionComponent>().MovementSpeed.X;
                 Moving = true;
             }
             else if (gp.IsButtonUp(Left) || gp.IsButtonUp(Right))
@@ -58,7 +57,7 @@ namespace SpaceInvaders.entities.components
             }
 
             // Stop moving if no buttons are pressed
-            if (!Moving) Position.EntitySpeed.X = 0.0f;
+            if (!Moving) BaseEntity.GetComponent<PositionComponent>().EntitySpeed.X = 0.0f;
         }
     }
 }

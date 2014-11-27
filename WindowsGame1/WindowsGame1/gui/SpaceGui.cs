@@ -31,7 +31,7 @@ namespace SpaceInvaders.gui
             _sb.DrawString(_content.Load<SpriteFont>("GUIFont"), "Score: " + _space.ScoreManager.Score, new Vector2(x, y), Color.White, 0, _content.Load<SpriteFont>("GUIFont").MeasureString("Score: " +  _space.ScoreManager.Score) / 2, 1.0f, SpriteEffects.None, 0.5f);
 
             // Draw health
-            var hc = (HealthComponent)_ship.Components["health"];
+            var hc = _ship.GetComponent<HealthComponent>();
             _sb.DrawString(_content.Load<SpriteFont>("GUIFont"), "Health: " + hc.Health, new Vector2(x, y + 20), Color.White, 0, _content.Load<SpriteFont>("GUIFont").MeasureString("Health: " + hc.Health) / 2, 1.0f, SpriteEffects.None, 0.5f);
             _sb.End();
         }

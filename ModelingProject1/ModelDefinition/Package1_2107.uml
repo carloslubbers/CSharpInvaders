@@ -147,7 +147,7 @@
           </property>
           <property
             Id="b5cf379e-4519-450a-88bb-d785ae8efffd"
-            name="PositionComponent"
+            name="GetComponent<PositionComponent>()Component"
             visibility="Protected"
             isLeaf="false"
             isStatic="false"
@@ -159,7 +159,7 @@
             <referencesInternal>
               <reference
                 Id="4a08b55d-2d65-4303-9a13-da08cb3ffd7a"
-                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ammo Type%3DAmmo Member%3DPositionComponent"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FCarlos%2FDesktop%2FCSharpInvaders-master%2FWindowsGame1%2FWindowsGame1%2Fbin%2Fx86%2FDebug%2FSpaceInvaders.exe Namespace%3DSpaceInvaders.entities.ammo Type%3DAmmo Member%3DGetComponent<PositionComponent>()Component"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -208,7 +208,7 @@
             <type_NamedElement>
               <classMoniker
                 Id="59d71247-2157-44c2-bf6b-2354d71a60e7"
-                LastKnownName="PositionComponent"
+                LastKnownName="GetComponent<PositionComponent>()Component"
                 LastKnownLocation="Package_1911.uml" />
             </type_NamedElement>
           </property>

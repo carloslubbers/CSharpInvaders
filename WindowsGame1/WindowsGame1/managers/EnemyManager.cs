@@ -25,22 +25,22 @@ namespace SpaceInvaders.managers
                 {
                     case 0:
                         _enemies[i] = new BaseEnemy(space);
-                        var tc1 = (TextureComponent)_enemies[i].Components["texture"];
+                        var tc1 = _enemies[i].GetComponent<TextureComponent>();
                         tc1.SetTexture("enemy1Texture");
                         break;
                     case 1:
                         _enemies[i] = new BaseEnemy(space);
-                        var tc2 = (TextureComponent)_enemies[i].Components["texture"];
+                        var tc2 = _enemies[i].GetComponent<TextureComponent>();
                         tc2.SetTexture("enemy2Texture");
                         break;
                     case 2:
                         _enemies[i] = new BaseEnemy(space);
-                        var tc3 = (TextureComponent)_enemies[i].Components["texture"];
+                        var tc3 = _enemies[i].GetComponent<TextureComponent>();
                         tc3.SetTexture("enemy3Texture");
                         break;
                     default:
                         _enemies[i] = new BaseEnemy(space);
-                        var tc4 = (TextureComponent)_enemies[i].Components["texture"];
+                        var tc4 = _enemies[i].GetComponent<TextureComponent>();
                         tc4.SetTexture("enemy1Texture");
                         break;
                 }
@@ -63,13 +63,13 @@ namespace SpaceInvaders.managers
             {
                 if (entityId == 0 || entityId == (MaxEnemyWidth-1))
                 {
-                    var bc = (BoundaryComponent)e.Components["boundary"];
-                    var pc = (PositionComponent)e.Components["position"];
-                    var tc = (TextureComponent)e.Components["texture"];
+                    var bc = e.GetComponent<BoundaryComponent>();
+                    var pc = e.GetComponent<PositionComponent>();
+                    var tc = e.GetComponent<TextureComponent>();
                     // Change X direction when screen edge has been reached
                     if (bc.GetSafeBounds().Left == pc.EntityPosition.X || bc.GetSafeBounds().Right - tc.Texture.Width == pc.EntityPosition.X)
                     {
-                        foreach (var pc2 in _enemies.Select(e2 => (PositionComponent)e2.Components["position"]))
+                        foreach (var pc2 in _enemies.Select(e2 => e2.GetComponent<PositionComponent>()))
                         {
                             if (pc2.EntityPosition.Y < _space.Viewport.Height)
                             {
@@ -94,7 +94,7 @@ namespace SpaceInvaders.managers
             var entityId = 0;
             foreach(var e in _enemies) {
                 // Calculate offset for enemy
-                var oc = (OffsetComponent)e.Components["offset"];
+                var oc = e.GetComponent<OffsetComponent>();
                 oc.SetOffset(75.0f * (entityId % MaxEnemyWidth)+ 50.0f, 10.0f + (entityId / MaxEnemyWidth) * 50.0f);
                 entityId++;
                 e.LoadContent();

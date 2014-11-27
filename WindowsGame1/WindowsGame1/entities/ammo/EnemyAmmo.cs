@@ -7,8 +7,8 @@ namespace SpaceInvaders.entities.ammo
     {
         public EnemyAmmo(Space space) : base(space)
         {
-            ((TextureComponent)Components["texture"]).SetTexture("enemy1Texture");
-            ((PositionComponent)Components["position"]).EntitySpeed.Y = 15.0f;
+            GetComponent<TextureComponent>().SetTexture("enemy1Texture");
+            GetComponent<PositionComponent>().EntitySpeed.Y = 15.0f;
         }
     }
 }

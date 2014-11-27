@@ -1,4 +1,4 @@
-﻿using SpaceInvaders.entities.components;
+﻿using SpaceInvaders.entities.interfaces;
 
 namespace SpaceInvaders.entities.components
 {
@@ -6,14 +6,8 @@ namespace SpaceInvaders.entities.components
     {
         public float Health = 100.0f;
 
-        public HealthComponent()
+        public HealthComponent(Entity baseEntity) : base(baseEntity)
         {
-            // Health uses default value (100.0f)
-        }
-
-        public HealthComponent(float health)
-        {
-            Health = health;
         }
 
         public override void LoadContent() {}

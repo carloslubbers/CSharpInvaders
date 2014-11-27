@@ -27,7 +27,7 @@ namespace SpaceInvaders.managers
             {
                 if (a == null || !a.Active) continue;
                 var a1 = a;
-                foreach (var e in from e in enemies where e != null && e.Active let tc = (TextureComponent) e.Components["texture"] where ((TextureComponent)a1.Components["texture"]).Bounds.Intersects(tc.Bounds) select e)
+                foreach (var e in from e in enemies where e != null && e.Active let tc = (TextureComponent) e.GetComponent<TextureComponent>() where a1.GetComponent<TextureComponent>().Bounds.Intersects(tc.Bounds) select e)
                 {
                     a.Active = false;
                     e.Active = false;

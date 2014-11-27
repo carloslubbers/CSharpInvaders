@@ -313,7 +313,7 @@
       </nodes>
     </generalizationConnector>
     <classShape Id="9976c9ea-7c60-47a0-be84-ec9adaf58212" absoluteBounds="15.625, 8.25, 1.5, 2.1487730896472925" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
-      <classMoniker Id="3ecb2e38-985c-40d5-b32f-dab3b23ed4a4" LastKnownName="PositionComponent" />
+      <classMoniker Id="3ecb2e38-985c-40d5-b32f-dab3b23ed4a4" LastKnownName="GetComponent<PositionComponent>()Component" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="b578f5ad-1d18-448e-ac99-989e9cf3b6e6" absoluteBounds="15.64, 8.765335639317831, 1.4700000000000002, 0.68164060264825832" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="41786a80-f4cc-4f94-a801-9a5314543b79" absoluteBounds="15.64, 9.456976241966089, 1.4700000000000002, 0.84179684768120455" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />

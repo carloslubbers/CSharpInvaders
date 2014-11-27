@@ -21,17 +21,17 @@ namespace SpaceInvaders.managers
             PointScored();
         }
 
-        private void PointScored() {
-            var tc = (TextureComponent)_player.Components["texture"];
-            var ic = (AbstractInputComponent) _player.Components["input"];
-            var fc = (FiringComponent) _player.Components["firing"];
+        private void PointScored()
+        {
+            var tc = _player.GetComponent<TextureComponent>();
+            var fc = _player.GetComponent<FiringComponent>();
 
             Console.WriteLine("Points: " + Score);
             switch (Score)
             {
                 case 10:
                     tc.SetTexture("blueshipTexture");
-                    ic.MovementSpeed = 10.0f;
+                    _player.MovementSpeed = 10.0f;
                     break;
                 case 20:
                     fc.SetDelay(150);

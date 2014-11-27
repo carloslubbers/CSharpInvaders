@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvaders.entities.interfaces;
-using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.components
 {
@@ -11,7 +10,7 @@ namespace SpaceInvaders.entities.components
         const Keys Left = Keys.Left;
         const Keys Right = Keys.Right;
 
-        public KeyboardInputComponent(Entity _base, PositionComponent position, FiringComponent firing) : base(_base, position, firing) { }
+        public KeyboardInputComponent(Entity baseEntity) : base(baseEntity) { }
 
         public override void Update(GameTime gameTime)
         {
@@ -42,12 +41,12 @@ namespace SpaceInvaders.entities.components
             }
             else if (ks.IsKeyDown(Left))
             {
-                Position.EntitySpeed.X = -1.0f*MovementSpeed;
+                BaseEntity.GetComponent<PositionComponent>().EntitySpeed.X = -1.0f * BaseEntity.GetComponent<PositionComponent>().MovementSpeed.X;
                 Moving = true;
             }
             else if (ks.IsKeyDown(Right))
             {
-                Position.EntitySpeed.X = MovementSpeed;
+                BaseEntity.GetComponent<PositionComponent>().EntitySpeed.X = BaseEntity.GetComponent<PositionComponent>().MovementSpeed.X;
                 Moving = true;
             }
             else if (ks.IsKeyUp(Left) || ks.IsKeyUp(Right))
@@ -56,7 +55,7 @@ namespace SpaceInvaders.entities.components
             }
 
             // Stop moving if no keys are pressed
-            if (!Moving) Position.EntitySpeed.X = 0.0f;
+            if (!Moving) BaseEntity.GetComponent<PositionComponent>().EntitySpeed.X = 0.0f;
         }
     }
 }

@@ -1,22 +1,16 @@
 ﻿using SpaceInvaders.entities.interfaces;
-using SpaceInvaders.world;
 
 namespace SpaceInvaders.entities.components
 {
     public abstract class AbstractInputComponent : AbstractComponent
     {
         protected readonly FiringComponent Firing;
-        protected readonly PositionComponent Position;
-        public float MovementSpeed = 5.0f;
-
-        protected readonly Entity BaseEntity;
         protected bool Moving;
 
-        protected AbstractInputComponent(Entity _base, PositionComponent position, FiringComponent firing)
+        protected AbstractInputComponent(Entity baseEntity) : base(baseEntity)
         {
-            BaseEntity = _base;
-            Position = position;
-            Firing = firing;
+            BaseEntity = baseEntity;
+            Firing = baseEntity.GetComponent<FiringComponent>();
         }
 
         public override void LoadContent() { }
